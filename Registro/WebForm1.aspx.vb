@@ -5,7 +5,8 @@
 
     End Sub
 
-    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles bRegister.Click
+        Dim bd As New accesoDatosSQL
+        bd.Conectar()
     End Sub
 End Class
