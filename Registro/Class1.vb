@@ -14,5 +14,21 @@ Public Class accesoDatosSQL
         End Try
         Return "CONEXION OK"
     End Function
+    Public Shared Sub cerrarconexion()
+        conexion.Close()
+    End Sub
+
+    Public Shared Function insertar(ByVal email As String, ByVal nombre As String, ByVal apellidos As String, ByVal numconfir As Integer, ByVal confirmado As Boolean, ByVal tipo As String, ByVal pass As String) As String
+        Dim st = "insert into tabla Usuarios values ('" & email & " ')"
+        Dim numregs As Integer
+        comando = New SqlCommand(st, conexion)
+        Try
+            numregs = comando.ExecuteNonQuery()
+        Catch ex As Exception
+            Return ex.Message
+        End Try
+        Return (numregs & " registro(s) insertado(s) en la BD ")
+    End Function
+
 
 End Class
