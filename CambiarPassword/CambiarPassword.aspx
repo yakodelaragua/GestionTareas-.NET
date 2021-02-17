@@ -36,7 +36,7 @@
                 </td>
                 <td class="auto-style3">
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tEmail" Display="Dynamic" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationGroup="email">Formato de email no válido</asp:RegularExpressionValidator>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tEmail" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="email">Campo obligatorio</asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tEmail" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="email" Display="Dynamic">Campo obligatorio</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -51,26 +51,32 @@
                     <asp:TextBox ID="tCode" runat="server" Width="290px"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tCode" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tCode" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="Code">Campo obligatorio</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style1">Introduzca la nueva contraseña:</td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="TextBox3" runat="server" Width="290px"></asp:TextBox>
+                    <asp:TextBox ID="tNewPass1" runat="server" Width="290px"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tNewPass1" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="Code">Campo obligatorio</asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="tNewPass1" Display="Dynamic" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="([A-Za-z0-9]){6,}" ValidationGroup="Code">La contraseña debe contener al menos 6 caracteres alfanuméricos</asp:RegularExpressionValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Repita la nueva contraseña:</td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="TextBox4" runat="server" Width="290px"></asp:TextBox>
+                    <asp:TextBox ID="tNewPass2" runat="server" Width="290px"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="tNewPass2" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="Code">Campo obligatorio</asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="tNewPass2" Display="Dynamic" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="([A-Za-z0-9]){6,}" ValidationGroup="Code">La contraseña debe contener al menos 6 caracteres alfanuméricos</asp:RegularExpressionValidator>
+                </td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <asp:Button ID="bRestablecer" runat="server" Text="Restablecer" Width="250px" />
+                    <asp:Button ID="bRestablecer" runat="server" Text="Restablecer" Width="250px" ValidationGroup="Code" />
                 </td>
                 <td>&nbsp;</td>
             </tr>
