@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Inicio.aspx.vb" Inherits="Inicio.WebForm1" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Inicio.aspx.vb" Inherits="Lab_2_y_3.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -26,8 +26,8 @@
                 <td class="auto-style3"> <asp:TextBox ID="tEmail" runat="server" Width="250px"></asp:TextBox>
                 </td>
                 <td>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" BorderColor="Red" ControlToValidate="tEmail" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tEmail" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Campo requerido</asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" BorderColor="Red" ControlToValidate="tEmail" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic">Formato de correo no válido</asp:RegularExpressionValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tEmail" ErrorMessage="RequiredFieldValidator" ForeColor="Red" Display="Dynamic">Campo requerido</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -35,7 +35,8 @@
                 <td class="auto-style3"> <asp:TextBox ID="tPass" runat="server" Width="250px"></asp:TextBox>
                 </td>
                 <td>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tPass" ErrorMessage="Campo requerido" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tPass" ErrorMessage="Campo requerido" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="tPass" Display="Dynamic" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="([a-zA-Z0-9]{6,})">La contraseña debe contener al menos 6 caracteres alfanuméricos</asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
@@ -46,13 +47,13 @@
             </tr>
             <tr>
                 <td colspan="2">
-            <asp:HyperLink ID="HLRegistro" runat="server" ForeColor="#0000EE">Quiero registrarme</asp:HyperLink>
+            <asp:HyperLink ID="HLRegistro" runat="server" ForeColor="#0000EE" NavigateUrl="~/Registro.aspx">Quiero registrarme</asp:HyperLink>
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td colspan="2">
-            <asp:HyperLink ID="HLCambioPass" runat="server" ForeColor="#0000EE">Modificar password</asp:HyperLink>
+            <asp:HyperLink ID="HLCambioPass" runat="server" ForeColor="#0000EE" NavigateUrl="~/Cambiar contraseña.aspx">Modificar password</asp:HyperLink>
                 </td>
                 <td>&nbsp;</td>
             </tr>

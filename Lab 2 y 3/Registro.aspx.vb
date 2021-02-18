@@ -1,4 +1,4 @@
-﻿Public Class WebForm2
+﻿Public Class Registro
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -12,6 +12,7 @@
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles bRegister.Click
+        accesoDatosSQL.insertar(tEmail.Text, tName.Text, tSurname.Text, 0, True, rbList.SelectedValue, tPass1.Text, 0)
 
     End Sub
 End Class

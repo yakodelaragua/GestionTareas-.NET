@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="WebForm3.aspx.vb" Inherits="Lab_2_y_3.WebForm3" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Cambiar contraseña.aspx.vb" Inherits="Lab_2_y_3.WebForm3" %>
 
 <!DOCTYPE html>
 
