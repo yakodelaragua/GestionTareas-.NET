@@ -18,8 +18,22 @@ Public Class accesoDatosSQL
         conexion.Close()
     End Sub
 
-    Public Shared Function insertar(ByVal email As String, ByVal nombre As String, ByVal apellidos As String, ByVal numconfir As Integer, ByVal confirmado As Boolean, ByVal tipo As String, ByVal pass As String) As String
-        Dim st = "insert into tabla Usuarios values ('" & email & " ')"
+    Public Shared Function insertar(ByVal email As String, ByVal nombre As String, ByVal apellidos As String, ByVal numconfir As Integer, ByVal confirmado As Boolean, ByVal tipo As String, ByVal pass As String, ByVal codPass As Integer) As String
+        Dim conf
+        If (confirmado = True) Then
+            conf = 1
+        Else
+            conf = 0
+        End If
+
+        Dim type
+        If (tipo = "rbStudent") Then
+            type = "Alumno"
+        Else
+            type = "Profesor"
+        End If
+
+        Dim st = "insert into Usuarios values ('" & email & "', '" & nombre & "', '" & apellidos & "', " & numconfir & ", " & conf & ", '" & type & "', '" & pass & "', " & codPass & ");"
         Dim numregs As Integer
         comando = New SqlCommand(st, conexion)
         Try
