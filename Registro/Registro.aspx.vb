@@ -12,6 +12,11 @@
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles bRegister.Click
+        accesoDatosSQL.insertar(tEmail.Text, tName.Text, tSurname.Text, 0, True, rbList.SelectedValue, tPass1.Text, 0)
+
+    End Sub
+
+    Protected Sub rbList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles rbList.SelectedIndexChanged
 
     End Sub
 End Class
