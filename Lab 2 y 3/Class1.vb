@@ -68,9 +68,9 @@ Public Class accesoDatosSQL
             'Creamos el mensaje con los parametros de origen y destino
             Dim message As New MailMessage(from_address, to_address)
             'Añadimos el asunto
-            message.Subject = "subject"
+            message.Subject = "Confirme su correo"
             'Concatenamos el cuerpo del mensaje a la plantilla
-            message.Body = "<html><head></head><body>" + "confirmar registro" + "</br>" + "<a href=" + "https://localhost:44348/Confirmar.aspx?email=" + email + "&numconf=" + numConfirm.ToString + ">Confirmar </a>" + "</body></html>"
+            message.Body = "<html><head></head><body>" + "confirmar registro" + "<br>" + "<a href=" + "https://localhost:44348/Confirmar.aspx?email=" + email + "&numconf=" + numConfirm.ToString + ">Confirmar </a>" + "</body></html>"
             'Definimos el cuerpo como html para poder escojer mejor como lo mandamos
             message.IsBodyHtml = True
             'Se envia el correo
