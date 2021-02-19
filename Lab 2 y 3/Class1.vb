@@ -110,7 +110,7 @@ Public Class accesoDatosSQL
             Randomize()
             codpass = Int((1000000 * Rnd()) + 1)
 
-            Dim st = "update Usuarios set codpass=" + codpass.ToString + " where email=" + email + ";"
+            Dim st = "update Usuarios set codpass=" + codpass.ToString + " where email='" + email + "';"
             comando = New SqlCommand(st, conexion)
             Dim numregs As Integer
 
@@ -130,17 +130,28 @@ Public Class accesoDatosSQL
         End Try
         Return True
     End Function
-    Public Shared Function modificarContraseña(ByVal email As String, ByVal newPass1 As String, ByVal newPass2 As String) As Integer
+    Public Shared Function modificarContraseña(ByVal email As String, ByVal newPass1 As String, ByVal newPass2 As String, ByVal code As Integer) As Integer
         Try
-            If newPass1 = newPass2 Then
-                Dim st = "update Usuarios set pass=" + newPass1 + "where email=" + email + ";"
-                Dim numregs As Integer
+            Dim st = "select * from Usuarios where email='" + email + "' and codpass=" + code.ToString + ";"
+            comando = New SqlCommand(st, conexion)
+            Dim numregs As Integer
+
+            Try
+                numregs = comando.ExecuteNonQuery()
+            Catch ex As Exception
+                Return ex.Message
+            End Try
+            If newPass1 = newPass2 And numregs = 1 Then
+                Dim st2 = "update Usuarios set pass='" + newPass1 + "'where email='" + email + "';"
+                Dim numregs2 As Integer
                 comando = New SqlCommand(st, conexion)
                 Try
-                    numregs = comando.ExecuteNonQuery()
+                    numregs2 = comando.ExecuteNonQuery()
                 Catch ex As Exception
                     Return ex.Message
                 End Try
+            Else
+                Return False
             End If
 
         Catch e As Exception
