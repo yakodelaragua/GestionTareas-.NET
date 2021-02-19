@@ -14,6 +14,10 @@
         Dim correoCorrecto = accesoDatosSQL.emailContraseña(tEmail.Text)
         If correoCorrecto = True Then
             bRestablecer.Enabled = True
+            tCode.Enabled = True
+            tNewPass1.Enabled = True
+            tNewPass2.Enabled = True
+            tEmail.Enabled = False
         Else
 
         End If

@@ -48,7 +48,7 @@
             <tr>
                 <td class="auto-style1">Introduzca el código recibido:</td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="tCode" runat="server" Width="290px"></asp:TextBox>
+                    <asp:TextBox ID="tCode" runat="server" Width="290px" Enabled="False"></asp:TextBox>
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tCode" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="Code">Campo obligatorio</asp:RequiredFieldValidator>
@@ -57,7 +57,7 @@
             <tr>
                 <td class="auto-style1">Introduzca la nueva contraseña:</td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="tNewPass1" runat="server" Width="290px"></asp:TextBox>
+                    <asp:TextBox ID="tNewPass1" runat="server" Width="290px" Enabled="False"></asp:TextBox>
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tNewPass1" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="Code">Campo obligatorio</asp:RequiredFieldValidator>
@@ -67,7 +67,7 @@
             <tr>
                 <td class="auto-style1">Repita la nueva contraseña:</td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="tNewPass2" runat="server" Width="290px"></asp:TextBox>
+                    <asp:TextBox ID="tNewPass2" runat="server" Width="290px" Enabled="False"></asp:TextBox>
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="tNewPass2" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="Code">Campo obligatorio</asp:RequiredFieldValidator>
