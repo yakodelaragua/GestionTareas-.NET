@@ -4,6 +4,7 @@
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim result As String
         result = accesoDatosSQL.Conectar()
+        accesoDatosSQL.eliminarNoConfirmados()
         Label1.Text = result
     End Sub
 
@@ -12,7 +13,10 @@
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles bRegister.Click
-        accesoDatosSQL.insertar(tEmail.Text, tName.Text, tSurname.Text, 0, True, rbList.SelectedValue, tPass1.Text, 0)
+        Randomize()
+        Dim numconfirm = CLng(Rnd() * 9000000) + 1000000
+        accesoDatosSQL.enviarEmail(tEmail.Text, numconfirm)
+        accesoDatosSQL.insertar(tEmail.Text, tName.Text, tSurname.Text, numconfirm, False, rbList.SelectedValue, tPass1.Text, 0)
 
     End Sub
 End Class

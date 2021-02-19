@@ -45,7 +45,7 @@ Public Class accesoDatosSQL
         Return (numregs & " registro(s) insertado(s) en la BD ")
     End Function
 
-    Public Shared Function enviarEmail(ByVal email As String) As Boolean
+    Public Shared Function enviarEmail(ByVal email As String, ByVal numConfirm As Integer) As Boolean
         Try
             'Direccion de origen
             Dim from_address As New MailAddress("emailconfirmation14@gmail.com", "Yara Diaz de Cerio")
@@ -70,7 +70,7 @@ Public Class accesoDatosSQL
             'Añadimos el asunto
             message.Subject = "subject"
             'Concatenamos el cuerpo del mensaje a la plantilla
-            message.Body = "<html><head></head><body>" + "confirmar registro" + "</body></html>"
+            message.Body = "<html><head></head><body>" + "confirmar registro" + "</br>" + "<a href=" + "https://localhost:44348/Confirmar.aspx?email=" + email + "&numconf=" + numConfirm.ToString + ">Confirmar </a>" + "</body></html>"
             'Definimos el cuerpo como html para poder escojer mejor como lo mandamos
             message.IsBodyHtml = True
             'Se envia el correo
@@ -179,5 +179,16 @@ Public Class accesoDatosSQL
     End Function
 
 
+    Public Shared Function eliminarNoConfirmados()
+        Dim st = "delete from Usuarios where Confirmado=0"
+        Dim numregs As Integer
+        comando = New SqlCommand(st, conexion)
+        Try
+            numregs = comando.ExecuteNonQuery()
+        Catch ex As Exception
+            Return ex.Message
+        End Try
+        Return True
+    End Function
 
 End Class
