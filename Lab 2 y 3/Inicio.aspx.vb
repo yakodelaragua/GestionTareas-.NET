@@ -6,6 +6,7 @@
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+        accesoDatosSQL.Conectar()
+        accesoDatosSQL.iniciarSesion(tEmail.Text, tPass.Text)
     End Sub
 End Class

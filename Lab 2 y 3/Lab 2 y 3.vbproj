@@ -97,6 +97,7 @@
     <Content Include="Registro.aspx" />
     <Content Include="CambiarPassword.aspx" />
     <Content Include="Confirmar.aspx" />
+    <Content Include="App.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.vb" />
@@ -145,6 +146,13 @@
     </Compile>
     <Compile Include="Confirmar.aspx.vb">
       <DependentUpon>Confirmar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="App.aspx.designer.vb">
+      <DependentUpon>App.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.aspx.vb">
+      <DependentUpon>App.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

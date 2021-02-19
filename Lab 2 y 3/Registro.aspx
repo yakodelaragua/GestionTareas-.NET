@@ -14,7 +14,7 @@
             width: 88px;
         }
         .auto-style3 {
-            width: 69%;
+            width: 72%;
         }
         .auto-style6 {
             width: 88px;
@@ -25,14 +25,14 @@
             height: 26px;
         }
         .auto-style8 {
-            width: 632px;
+            width: 750px;
             height: 26px;
         }
         .auto-style9 {
             width: 258px;
         }
         .auto-style10 {
-            width: 632px;
+            width: 750px;
         }
     </style>
 </head>
@@ -85,7 +85,6 @@
                     <td class="auto-style2">Repetir Psw</td>
                     <td class="auto-style9">
                         <asp:TextBox ID="tPass2" runat="server" Width="250px" TextMode="Password"></asp:TextBox>
-                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                     </td>
                     <td class="auto-style10">
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="tPass2" Display="Dynamic" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="([A-Za-z0-9]){6,}">La contraseña debe contener al menos 6 caracteres alfanuméricos</asp:RegularExpressionValidator>
@@ -107,8 +106,10 @@
             </table>
         </div>
         <asp:Button ID="bRegister" runat="server" Text="Registrar" Width="214px" />
+        <br />
         <p>
-            &nbsp;</p>
+            <asp:Label ID="Label1" runat="server" ForeColor="Blue"></asp:Label>
+        </p>
     </form>
 </body>
 </html>

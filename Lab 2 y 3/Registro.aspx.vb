@@ -5,7 +5,7 @@
         Dim result As String
         result = accesoDatosSQL.Conectar()
         accesoDatosSQL.eliminarNoConfirmados()
-        Label1.Text = result
+
     End Sub
 
     Protected Sub Page_Unload(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Unload
@@ -17,6 +17,6 @@
         Dim numconfirm = CLng(Rnd() * 9000000) + 1000000
         accesoDatosSQL.enviarEmail(tEmail.Text, numconfirm)
         accesoDatosSQL.insertar(tEmail.Text, tName.Text, tSurname.Text, numconfirm, False, rbList.SelectedValue, tPass1.Text, 0)
-
+        Label1.Text = "Compruebe su correo"
     End Sub
 End Class

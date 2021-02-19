@@ -45,6 +45,28 @@ Public Class accesoDatosSQL
         Return (numregs & " registro(s) insertado(s) en la BD ")
     End Function
 
+    Public Shared Function iniciarSesion(ByVal email As String, ByVal pass As String)
+        Try
+            Dim st = "select * from Usuarios where email='" + email + "' and pass='" + pass + "';"
+            comando = New SqlCommand(st, conexion)
+            Dim sql As SqlDataReader
+            Try
+                sql = comando.ExecuteReader()
+            Catch ex As Exception
+                Return ex.Message
+            End Try
+            If sql.HasRows Then
+
+                HttpContext.Current.Response.Redirect("~/App.aspx")
+
+            End If
+            sql.Close()
+        Catch ex As Exception
+            Return ex.Message
+        End Try
+
+    End Function
+
     Public Shared Function enviarEmail(ByVal email As String, ByVal numConfirm As Integer) As Boolean
         Try
             'Direccion de origen
