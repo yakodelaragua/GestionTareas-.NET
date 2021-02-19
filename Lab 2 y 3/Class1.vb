@@ -110,7 +110,7 @@ Public Class accesoDatosSQL
             Randomize()
             codpass = Int((1000000 * Rnd()) + 1)
 
-            Dim st = "update Usuarios set codpass=" + codpass.ToString + " where email='" + email + "';"
+            Dim st = "update Usuarios set codpass=" + codpass.ToString + " where email=" + email + ";"
             comando = New SqlCommand(st, conexion)
             Dim numregs As Integer
 
@@ -160,11 +160,18 @@ Public Class accesoDatosSQL
         Return True
 
 
-
-
     End Function
 
-
+    Public Shared Function confirmarUsuario(ByVal email As String, ByVal numconf As Integer)
+        Dim st = "update Usuarios set confirmado = 1 where email = '" + email + "'"
+        comando = New SqlCommand(st, conexion)
+        Try
+            Dim numregs = comando.ExecuteNonQuery()
+        Catch ex As Exception
+            Return ex.Message
+        End Try
+        Return True
+    End Function
     Public Shared Function eliminarNoConfirmados()
         Dim st = "delete from Usuarios where Confirmado=0"
         Dim numregs As Integer
