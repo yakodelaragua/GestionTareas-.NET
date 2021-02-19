@@ -44,5 +44,4 @@ Public Class accesoDatosSQL
         Return (numregs & " registro(s) insertado(s) en la BD ")
     End Function
 
-
 End Class
