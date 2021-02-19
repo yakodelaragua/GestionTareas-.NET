@@ -56,15 +56,16 @@ Public Class accesoDatosSQL
                 Return ex.Message
             End Try
             If sql.HasRows Then
-
+                sql.Close()
                 HttpContext.Current.Response.Redirect("~/App.aspx")
-
+            Else
+                sql.Close()
+                Return False
             End If
-            sql.Close()
         Catch ex As Exception
             Return ex.Message
         End Try
-
+        Return True
     End Function
 
     Public Shared Function enviarEmail(ByVal email As String, ByVal numConfirm As Integer) As Boolean

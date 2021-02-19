@@ -86,6 +86,15 @@ Partial Public Class WebForm1
     Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''Control Label1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control HLRegistro.
     '''</summary>
     '''<remarks>
