@@ -48,7 +48,7 @@
             <tr>
                 <td class="auto-style1">Introduzca el código recibido:</td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="tCode" runat="server" Width="290px" Enabled="False"></asp:TextBox>
+                    <asp:TextBox ID="tCode" runat="server" Width="290px" Enabled="False" TextMode="Number"></asp:TextBox>
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tCode" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="Code">Campo obligatorio</asp:RequiredFieldValidator>
@@ -57,7 +57,7 @@
             <tr>
                 <td class="auto-style1">Introduzca la nueva contraseña:</td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="tNewPass1" runat="server" Width="290px" Enabled="False"></asp:TextBox>
+                    <asp:TextBox ID="tNewPass1" runat="server" Width="290px" Enabled="False" TextMode="Password"></asp:TextBox>
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tNewPass1" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="Code">Campo obligatorio</asp:RequiredFieldValidator>
@@ -67,7 +67,7 @@
             <tr>
                 <td class="auto-style1">Repita la nueva contraseña:</td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="tNewPass2" runat="server" Width="290px" Enabled="False"></asp:TextBox>
+                    <asp:TextBox ID="tNewPass2" runat="server" Width="290px" Enabled="False" TextMode="Password"></asp:TextBox>
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="tNewPass2" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="Code">Campo obligatorio</asp:RequiredFieldValidator>
@@ -77,6 +77,13 @@
             <tr>
                 <td colspan="2">
                     <asp:Button ID="bRestablecer" runat="server" Text="Restablecer" Width="250px" ValidationGroup="Code" Enabled="False" />
+                    <asp:Label ID="lPassDiferente" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label ID="lPassModificada" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <asp:Button ID="bInicio" runat="server" CssClass="auto-style1" PostBackUrl="~/Inicio.aspx" Text="Volver inicio" Width="246px" />
+                    <br />
                 </td>
                 <td>&nbsp;</td>
             </tr>

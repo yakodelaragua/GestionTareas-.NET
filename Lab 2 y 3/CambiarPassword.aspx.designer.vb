@@ -138,4 +138,31 @@ Partial Public Class WebForm3
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents bRestablecer As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control lPassDiferente.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lPassDiferente As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control lPassModificada.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lPassModificada As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control bInicio.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents bInicio As Global.System.Web.UI.WebControls.Button
 End Class

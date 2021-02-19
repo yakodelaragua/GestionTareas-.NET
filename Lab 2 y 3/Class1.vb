@@ -130,10 +130,27 @@ Public Class accesoDatosSQL
         End Try
         Return True
     End Function
-    Public Shared Function modificarContraseña(ByVal email As String, ByVal newPass1 As String, ByVal newPass2 As String, ByVal code As Integer) As Integer
+
+    Public Shared Function estaRegistrado(ByVal email As String) As Boolean
+        Dim st = "select * from Usuarios where email='" + email + "';"
+        comando = New SqlCommand(st, conexion)
+        Dim sql As SqlDataReader
+
         Try
-
-
+            sql = comando.ExecuteReader()
+        Catch ex As Exception
+            Return ex.Message
+        End Try
+        If sql.HasRows Then
+            sql.Close()
+            Return True
+        Else
+            sql.Close()
+            Return False
+        End If
+    End Function
+    Public Shared Function modificarContraseña(ByVal email As String, ByVal newPass As String, ByVal code As Integer) As Integer
+        Try
             Dim st = "select * from Usuarios where email='" + email + "' and codpass=" + code.ToString + ";"
             comando = New SqlCommand(st, conexion)
             Dim sql As SqlDataReader
@@ -143,8 +160,8 @@ Public Class accesoDatosSQL
             Catch ex As Exception
                 Return ex.Message
             End Try
-            If newPass1 = newPass2 And sql.HasRows Then
-                Dim st2 = "update Usuarios set pass='" + newPass1 + "'where email='" + email + "';"
+            If sql.HasRows Then
+                Dim st2 = "update Usuarios set pass='" + newPass + "'where email='" + email + "';"
                 Dim numregs2 As Integer
                 sql.Close()
                 comando = New SqlCommand(st2, conexion)
