@@ -6,7 +6,7 @@
     End Sub
 
     Protected Sub bRestablecer_Click(sender As Object, e As EventArgs) Handles bRestablecer.Click
-
+        accesoDatosSQL.modificarContraseña(tEmail.Text, tNewPass1.Text, tNewPass2.Text)
     End Sub
 
     Protected Sub bEnviar_Click(sender As Object, e As EventArgs) Handles bEnviar.Click
