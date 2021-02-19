@@ -6,6 +6,11 @@
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+        accesoDatosSQL.Conectar()
+        Dim exists = accesoDatosSQL.iniciarSesion(tEmail.Text, tPass.Text)
+        If (Not exists) Then
+            Label1.Text = "El usuario o contraseña son incorrectos"
+            tPass.Text = ""
+        End If
     End Sub
 End Class
