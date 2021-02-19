@@ -35,7 +35,7 @@
                     <asp:TextBox ID="tEmail" runat="server" Width="290px"></asp:TextBox>
                 </td>
                 <td class="auto-style3">
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tEmail" Display="Dynamic" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationGroup="email">Formato de email no válido</asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tEmail" Display="Dynamic" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationGroup="email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">Formato de email no válido</asp:RegularExpressionValidator>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tEmail" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="email" Display="Dynamic">Campo obligatorio</asp:RequiredFieldValidator>
                 </td>
             </tr>
@@ -76,7 +76,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <asp:Button ID="bRestablecer" runat="server" Text="Restablecer" Width="250px" ValidationGroup="Code" />
+                    <asp:Button ID="bRestablecer" runat="server" Text="Restablecer" Width="250px" ValidationGroup="Code" Enabled="False" />
                 </td>
                 <td>&nbsp;</td>
             </tr>

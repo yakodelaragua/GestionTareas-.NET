@@ -10,6 +10,11 @@
     End Sub
 
     Protected Sub bEnviar_Click(sender As Object, e As EventArgs) Handles bEnviar.Click
+        Dim correoCorrecto = accesoDatosSQL.emailContraseña(tEmail.Text)
+        If correoCorrecto = True Then
+            bRestablecer.Enabled = True
+        Else
 
+        End If
     End Sub
 End Class
