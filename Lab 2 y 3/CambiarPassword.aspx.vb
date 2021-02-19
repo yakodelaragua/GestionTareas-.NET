@@ -8,4 +8,8 @@
     Protected Sub bRestablecer_Click(sender As Object, e As EventArgs) Handles bRestablecer.Click
 
     End Sub
+
+    Protected Sub bEnviar_Click(sender As Object, e As EventArgs) Handles bEnviar.Click
+
+    End Sub
 End Class
