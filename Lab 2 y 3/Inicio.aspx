@@ -53,7 +53,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-            <asp:HyperLink ID="HLCambioPass" runat="server" ForeColor="#0000EE" NavigateUrl="~/Cambiar contraseña.aspx">Modificar password</asp:HyperLink>
+            <asp:HyperLink ID="HLCambioPass" runat="server" ForeColor="#0000EE" NavigateUrl="~/CambiarPassword.aspx">Modificar password</asp:HyperLink>
                 </td>
                 <td>&nbsp;</td>
             </tr>

@@ -8,7 +8,12 @@
     <title></title>
 </head>
 <body>
-    <p>
-        Email registrado con éxito</p>
+    <form id="form1" runat="server">
+        <p>
+            Email registrado con éxito</p>
+        <p>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Inicio.aspx">Volver</asp:HyperLink>
+        </p>
+    </form>
 </body>
 </html>
