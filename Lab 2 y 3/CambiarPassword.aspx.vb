@@ -14,21 +14,29 @@
         If tNewPass1.Text = tNewPass2.Text Then
             If accesoDatosSQL.modificarContraseña(tEmail.Text, tNewPass1.Text, tCode.Text) = False Then
                 lPassDiferente.Text = "Comprueba que el código introducido sea correcto"
+                lPassModificada.Text = ""
+                lCorreoNoRegistrado.Text = ""
             Else
+                bEnviar.Enabled = False
                 bRestablecer.Enabled = False
                 tCode.Enabled = False
                 tNewPass1.Enabled = False
                 tNewPass2.Enabled = False
                 lPassModificada.Text = "Se ha modificado la contraseña"
-
+                lPassDiferente.Text = ""
+                lCorreoNoRegistrado.Text = ""
             End If
 
         Else
             lPassDiferente.Text = "La contraseña no coincide"
+            lPassModificada.Text = ""
+            lCorreoNoRegistrado.Text = ""
         End If
     End Sub
 
     Protected Sub bEnviar_Click(sender As Object, e As EventArgs) Handles bEnviar.Click
+        lPassDiferente.Text = ""
+        lPassModificada.Text = ""
         If accesoDatosSQL.estaRegistrado(tEmail.Text) Then
             Dim correoCorrecto = accesoDatosSQL.emailContraseña(tEmail.Text)
             If correoCorrecto = True Then
@@ -37,9 +45,10 @@
                 tNewPass1.Enabled = True
                 tNewPass2.Enabled = True
                 tEmail.Enabled = False
+                lCorreoNoRegistrado.Text = ""
             End If
         Else
-            lPassDiferente.Text = "El correo introducido no está registrado"
+            lCorreoNoRegistrado.Text = "El correo introducido no está registrado"
         End If
 
     End Sub

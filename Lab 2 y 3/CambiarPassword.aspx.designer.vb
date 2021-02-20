@@ -59,6 +59,15 @@ Partial Public Class WebForm3
     Protected WithEvents bEnviar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''Control lCorreoNoRegistrado.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lCorreoNoRegistrado As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control tCode.
     '''</summary>
     '''<remarks>
@@ -66,6 +75,15 @@ Partial Public Class WebForm3
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents tCode As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control lPassDiferente.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lPassDiferente As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control RequiredFieldValidator2.
@@ -138,15 +156,6 @@ Partial Public Class WebForm3
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents bRestablecer As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control lPassDiferente.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lPassDiferente As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control lPassModificada.

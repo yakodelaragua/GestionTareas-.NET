@@ -71,7 +71,7 @@ Public Class accesoDatosSQL
     Public Shared Function enviarEmail(ByVal email As String, ByVal numConfirm As Integer) As Boolean
         Try
             'Direccion de origen
-            Dim from_address As New MailAddress("emailconfirmation14@gmail.com", "Yara Diaz de Cerio")
+            Dim from_address As New MailAddress("emailconfirmation14@gmail.com", "HADS21-14")
             'Direccion de destino
             Dim to_address As New MailAddress(email)
             'Password de la cuenta
@@ -91,9 +91,9 @@ Public Class accesoDatosSQL
             'Creamos el mensaje con los parametros de origen y destino
             Dim message As New MailMessage(from_address, to_address)
             'Añadimos el asunto
-            message.Subject = "Confirme su correo"
+            message.Subject = "Confirmación de correo"
             'Concatenamos el cuerpo del mensaje a la plantilla
-            message.Body = "<html><head></head><body>" + "confirmar registro" + "<br>" + "<a href=" + "https://localhost:44348/Confirmar.aspx?email=" + email + "&numconf=" + numConfirm.ToString + ">Confirmar </a>" + "</body></html>"
+            message.Body = "<html><head></head><body>" + "<h1>Pulse CONTINUAR para confirmar el registro</h1>" + "<a href=" + "https://localhost:44348/Confirmar.aspx?email=" + email + "&numconf=" + numConfirm.ToString + ">CONTINUAR</a>" + "<br></br>Si ha recibido este correo por error ignórelo</body></html>"
             'Definimos el cuerpo como html para poder escojer mejor como lo mandamos
             message.IsBodyHtml = True
             'Se envia el correo
@@ -107,7 +107,7 @@ Public Class accesoDatosSQL
     Public Shared Function emailContraseña(ByVal email As String) As Integer
         Try
             'Direccion de origen
-            Dim from_address As New MailAddress("emailconfirmation14@gmail.com", "Yara Diaz de Cerio")
+            Dim from_address As New MailAddress("emailconfirmation14@gmail.com", "HADS21-14")
             'Direccion de destino
             Dim to_address As New MailAddress(email)
             'Password de la cuenta
@@ -127,7 +127,7 @@ Public Class accesoDatosSQL
             'Creamos el mensaje con los parametros de origen y destino
             Dim message As New MailMessage(from_address, to_address)
             'Añadimos el asunto
-            message.Subject = "subject"
+            message.Subject = "Solicitud de cambio de contraseña"
 
             Dim codpass As Integer
             Randomize()
@@ -143,7 +143,7 @@ Public Class accesoDatosSQL
                 Return ex.Message
             End Try
             'Concatenamos el cuerpo del mensaje a la plantilla
-            message.Body = "<html><head></head><body>" + codpass.ToString + "</body></html>"
+            message.Body = "<html><head></head><body>" + "<h1>Se ha solicitado un cambio de contraseña</h1> <p>Introduzca el siguiente código: </p>" + codpass.ToString + "<br></br> <p>Si ha recibido este mensaje por error ignórelo</p> </body></html>"
             'Definimos el cuerpo como html para poder escojer mejor como lo mandamos
             message.IsBodyHtml = True
             'Se envia el correo

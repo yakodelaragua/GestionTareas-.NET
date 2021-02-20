@@ -24,6 +24,10 @@
         .auto-style5 {
             width: 116px;
         }
+        .auto-style6 {
+            width: 289px;
+            margin-top: 0px;
+        }
     </style>
 </head>
 <body>
@@ -40,8 +44,11 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
+                <td>
                     <asp:Button ID="bEnviar" runat="server" Text="Enviar" ValidationGroup="email" Width="250px" />
+                </td>
+                <td>
+                    <asp:Label ID="lCorreoNoRegistrado" runat="server" ForeColor="Red"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -51,7 +58,8 @@
                     <asp:TextBox ID="tCode" runat="server" Width="290px" Enabled="False" TextMode="Number"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tCode" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="Code">Campo obligatorio</asp:RequiredFieldValidator>
+                    <asp:Label ID="lPassDiferente" runat="server" ForeColor="Red"></asp:Label>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tCode" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="Code" Display="Dynamic">Campo obligatorio</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -75,15 +83,18 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
+                <td>
                     <asp:Button ID="bRestablecer" runat="server" Text="Restablecer" Width="250px" ValidationGroup="Code" Enabled="False" />
-                    <asp:Label ID="lPassDiferente" runat="server" Text="Label"></asp:Label>
                     <br />
-                    <br />
-                    <asp:Label ID="lPassModificada" runat="server" Text="Label"></asp:Label>
-                    <br />
-                    <asp:Button ID="bInicio" runat="server" CssClass="auto-style1" PostBackUrl="~/Inicio.aspx" Text="Volver inicio" Width="246px" />
-                    <br />
+                </td>
+                <td>
+                    <asp:Label ID="lPassModificada" runat="server" ForeColor="Red"></asp:Label>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:Button ID="bInicio" runat="server" CssClass="auto-style6" PostBackUrl="~/Inicio.aspx" Text="Volver inicio" Width="250px" />
                 </td>
                 <td>&nbsp;</td>
             </tr>

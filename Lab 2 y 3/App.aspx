@@ -10,7 +10,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            Has iniciado sesión</div>
+            <h1>¡Enhorabuena, has iniciado sesión!</h1>
+        </div>
     </form>
 </body>
 </html>

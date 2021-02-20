@@ -109,6 +109,7 @@
         <br />
         <p>
             <asp:Label ID="Label1" runat="server" ForeColor="Blue"></asp:Label>
+            <asp:Label ID="Label2" runat="server" ForeColor="Red"></asp:Label>
         </p>
     </form>
 </body>
