@@ -45,6 +45,7 @@
                 tNewPass1.Enabled = True
                 tNewPass2.Enabled = True
                 tEmail.Enabled = False
+                bEnviar.Enabled = False
                 lCorreoNoRegistrado.Text = ""
             End If
         Else
