@@ -8,10 +8,10 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 289px;
+            width: 315px;
         }
         .auto-style2 {
-            width: 289px;
+            width: 315px;
             height: 26px;
         }
         .auto-style3 {
@@ -34,7 +34,7 @@
     <form id="form1" runat="server">
         <table style="width: 100%;">
             <tr>
-                <td class="auto-style2">Introduce el email parar recuperar contraseña:</td>
+                <td class="auto-style2">Introduce el email para recuperar contraseña:</td>
                 <td class="auto-style4">
                     <asp:TextBox ID="tEmail" runat="server" Width="290px"></asp:TextBox>
                 </td>
@@ -44,7 +44,7 @@
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="auto-style1">
                     <asp:Button ID="bEnviar" runat="server" Text="Enviar" ValidationGroup="email" Width="250px" />
                 </td>
                 <td>
@@ -83,12 +83,12 @@
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="auto-style1">
                     <asp:Button ID="bRestablecer" runat="server" Text="Restablecer" Width="250px" ValidationGroup="Code" Enabled="False" />
                     <br />
                 </td>
                 <td>
-                    <asp:Label ID="lPassModificada" runat="server" ForeColor="Red"></asp:Label>
+                    <asp:Label ID="lPassModificada" runat="server" ForeColor="Blue"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
