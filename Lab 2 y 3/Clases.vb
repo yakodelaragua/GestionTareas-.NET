@@ -45,10 +45,33 @@ Public Class accesoDatosSQL
         Return (numregs & " registro(s) insertado(s) en la BD ")
     End Function
 
-    Public Shared Function enviarEmail(ByVal email As String) As Boolean
+    Public Shared Function iniciarSesion(ByVal email As String, ByVal pass As String)
+        Try
+            Dim st = "select * from Usuarios where email='" + email + "' and pass='" + pass + "';"
+            comando = New SqlCommand(st, conexion)
+            Dim sql As SqlDataReader
+            Try
+                sql = comando.ExecuteReader()
+            Catch ex As Exception
+                Return ex.Message
+            End Try
+            If sql.HasRows Then
+                sql.Close()
+                HttpContext.Current.Response.Redirect("~/App.aspx")
+            Else
+                sql.Close()
+                Return False
+            End If
+        Catch ex As Exception
+            Return ex.Message
+        End Try
+        Return True
+    End Function
+
+    Public Shared Function enviarEmail(ByVal email As String, ByVal numConfirm As Integer) As Boolean
         Try
             'Direccion de origen
-            Dim from_address As New MailAddress("emailconfirmation14@gmail.com", "Yara Diaz de Cerio")
+            Dim from_address As New MailAddress("emailconfirmation14@gmail.com", "HADS21-14")
             'Direccion de destino
             Dim to_address As New MailAddress(email)
             'Password de la cuenta
@@ -68,9 +91,9 @@ Public Class accesoDatosSQL
             'Creamos el mensaje con los parametros de origen y destino
             Dim message As New MailMessage(from_address, to_address)
             'Añadimos el asunto
-            message.Subject = "subject"
+            message.Subject = "Confirmación de correo"
             'Concatenamos el cuerpo del mensaje a la plantilla
-            message.Body = "<html><head></head><body>" + "confirmar registro" + "</body></html>"
+            message.Body = "<html><head></head><body>" + "<h1>Pulse CONTINUAR para confirmar el registro</h1>" + "<a href=" + "https://localhost:44348/Confirmar.aspx?email=" + email + "&numconf=" + numConfirm.ToString + ">CONTINUAR</a>" + "<br></br>Si ha recibido este correo por error ignórelo</body></html>"
             'Definimos el cuerpo como html para poder escojer mejor como lo mandamos
             message.IsBodyHtml = True
             'Se envia el correo
@@ -81,10 +104,10 @@ Public Class accesoDatosSQL
         Return True
     End Function
 
-    Public Shared Function modificarContraseña(ByVal email As String) As Integer
+    Public Shared Function emailContraseña(ByVal email As String) As Integer
         Try
             'Direccion de origen
-            Dim from_address As New MailAddress("emailconfirmation14@gmail.com", "Yara Diaz de Cerio")
+            Dim from_address As New MailAddress("emailconfirmation14@gmail.com", "HADS21-14")
             'Direccion de destino
             Dim to_address As New MailAddress(email)
             'Password de la cuenta
@@ -104,22 +127,23 @@ Public Class accesoDatosSQL
             'Creamos el mensaje con los parametros de origen y destino
             Dim message As New MailMessage(from_address, to_address)
             'Añadimos el asunto
-            message.Subject = "subject"
+            message.Subject = "Solicitud de cambio de contraseña"
 
             Dim codpass As Integer
             Randomize()
-            codpass = Int((100000 * Rnd()) + 1)
+            codpass = Int((1000000 * Rnd()) + 1)
 
-            Dim st = "update Usuarios set codpass=" + codpass + "where email=" + email + ";"
-            Dim numregs As Integer
+            Dim st = "update Usuarios set codpass=" + codpass.ToString + " where email='" + email + "';"
             comando = New SqlCommand(st, conexion)
+            Dim numregs As Integer
+
             Try
                 numregs = comando.ExecuteNonQuery()
             Catch ex As Exception
                 Return ex.Message
             End Try
             'Concatenamos el cuerpo del mensaje a la plantilla
-            message.Body = "<html><head></head><body>" + "confirmar registro" + "</body></html>"
+            message.Body = "<html><head></head><body>" + "<h1>Se ha solicitado un cambio de contraseña</h1> <p>Introduzca el siguiente código: </p>" + codpass.ToString + "<br></br> <p>Si ha recibido este mensaje por error ignórelo</p> </body></html>"
             'Definimos el cuerpo como html para poder escojer mejor como lo mandamos
             message.IsBodyHtml = True
             'Se envia el correo
@@ -130,7 +154,77 @@ Public Class accesoDatosSQL
         Return True
     End Function
 
+    Public Shared Function estaRegistrado(ByVal email As String) As Boolean
+        Dim st = "select * from Usuarios where email='" + email + "';"
+        comando = New SqlCommand(st, conexion)
+        Dim sql As SqlDataReader
+
+        Try
+            sql = comando.ExecuteReader()
+        Catch ex As Exception
+            Return ex.Message
+        End Try
+        If sql.HasRows Then
+            sql.Close()
+            Return True
+        Else
+            sql.Close()
+            Return False
+        End If
+    End Function
+    Public Shared Function modificarContraseña(ByVal email As String, ByVal newPass As String, ByVal code As Integer) As Integer
+        Try
+            Dim st = "select * from Usuarios where email='" + email + "' and codpass=" + code.ToString + ";"
+            comando = New SqlCommand(st, conexion)
+            Dim sql As SqlDataReader
+
+            Try
+                sql = comando.ExecuteReader()
+            Catch ex As Exception
+                Return ex.Message
+            End Try
+            If sql.HasRows Then
+                Dim st2 = "update Usuarios set pass='" + newPass + "'where email='" + email + "';"
+                Dim numregs2 As Integer
+                sql.Close()
+                comando = New SqlCommand(st2, conexion)
+                Try
+                    numregs2 = comando.ExecuteNonQuery()
+                Catch ex As Exception
+                    Return ex.Message
+                End Try
+            Else
+                Return False
+            End If
+
+        Catch e As Exception
+            Return False
+        End Try
+        Return True
 
 
+    End Function
+
+    Public Shared Function confirmarUsuario(ByVal email As String, ByVal numconf As Integer)
+        Dim st = "update Usuarios set confirmado = 1 where email = '" + email + "'"
+        comando = New SqlCommand(st, conexion)
+        Try
+            Dim numregs = comando.ExecuteNonQuery()
+        Catch ex As Exception
+            Return ex.Message
+        End Try
+        Return True
+    End Function
+    Public Shared Function eliminarNoConfirmados()
+        Dim st = "delete from Usuarios where Confirmado=0"
+        Dim numregs As Integer
+        comando = New SqlCommand(st, conexion)
+        Try
+            numregs = comando.ExecuteNonQuery()
+        Catch ex As Exception
+            Return ex.Message
+        End Try
+        Return True
+    End Function
 
 End Class

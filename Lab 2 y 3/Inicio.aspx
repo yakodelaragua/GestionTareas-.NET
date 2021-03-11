@@ -32,7 +32,7 @@
             </tr>
             <tr>
                 <td class="auto-style1">Contraseña:</td>
-                <td class="auto-style3"> <asp:TextBox ID="tPass" runat="server" Width="250px"></asp:TextBox>
+                <td class="auto-style3"> <asp:TextBox ID="tPass" runat="server" Width="250px" TextMode="Password"></asp:TextBox>
                 </td>
                 <td>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tPass" ErrorMessage="Campo requerido" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
@@ -43,7 +43,9 @@
                 <td colspan="2">
             <asp:Button ID="Button1" runat="server" Text="Iniciar sesión" CssClass="auto-style2" Width="251px" />
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
+                </td>
             </tr>
             <tr>
                 <td colspan="2">
@@ -53,7 +55,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-            <asp:HyperLink ID="HLCambioPass" runat="server" ForeColor="#0000EE" NavigateUrl="~/Cambiar contraseña.aspx">Modificar password</asp:HyperLink>
+            <asp:HyperLink ID="HLCambioPass" runat="server" ForeColor="#0000EE" NavigateUrl="~/CambiarPassword.aspx">Modificar password</asp:HyperLink>
                 </td>
                 <td>&nbsp;</td>
             </tr>

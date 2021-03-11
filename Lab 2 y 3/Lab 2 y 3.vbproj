@@ -95,10 +95,12 @@
     <Content Include="Web.config" />
     <Content Include="Inicio.aspx" />
     <Content Include="Registro.aspx" />
-    <Content Include="Cambiar contraseña.aspx" />
+    <Content Include="CambiarPassword.aspx" />
+    <Content Include="Confirmar.aspx" />
+    <Content Include="App.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.vb" />
+    <Compile Include="Clases.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -132,11 +134,25 @@
       <DependentUpon>Registro.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Cambiar contraseña.aspx.designer.vb">
-      <DependentUpon>Cambiar contraseña.aspx</DependentUpon>
+    <Compile Include="CambiarPassword.aspx.designer.vb">
+      <DependentUpon>CambiarPassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cambiar contraseña.aspx.vb">
-      <DependentUpon>Cambiar contraseña.aspx</DependentUpon>
+    <Compile Include="CambiarPassword.aspx.vb">
+      <DependentUpon>CambiarPassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Confirmar.aspx.designer.vb">
+      <DependentUpon>Confirmar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmar.aspx.vb">
+      <DependentUpon>Confirmar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="App.aspx.designer.vb">
+      <DependentUpon>App.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.aspx.vb">
+      <DependentUpon>App.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
