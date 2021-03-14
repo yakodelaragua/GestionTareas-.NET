@@ -100,6 +100,7 @@
     <Content Include="App.aspx" />
     <Content Include="Alumno.aspx" />
     <Content Include="TareasAlumno.aspx" />
+    <Content Include="InstanciarTarea.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases.vb" />
@@ -169,6 +170,13 @@
     </Compile>
     <Compile Include="TareasAlumno.aspx.vb">
       <DependentUpon>TareasAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InstanciarTarea.aspx.designer.vb">
+      <DependentUpon>InstanciarTarea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InstanciarTarea.aspx.vb">
+      <DependentUpon>InstanciarTarea.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

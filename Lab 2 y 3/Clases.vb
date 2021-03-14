@@ -227,4 +227,23 @@ Public Class accesoDatosSQL
         Return True
     End Function
 
+    Public Shared Function update(ByVal tarea As String, ByVal hora As Integer) As Integer
+        Try
+            Dim st = "update EstudiantesTareas set HReales=" + hora.ToString + " where CodTarea='" + tarea + "';"
+            comando = New SqlCommand(st, conexion)
+            Dim sql As SqlDataReader
+
+            Try
+                sql = comando.ExecuteReader()
+            Catch ex As Exception
+                Return ex.Message
+            End Try
+
+        Catch e As Exception
+            Return False
+        End Try
+        Return True
+
+
+    End Function
 End Class

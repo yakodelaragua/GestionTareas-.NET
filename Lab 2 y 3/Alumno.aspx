@@ -8,8 +8,8 @@
     <title></title>
     <style type="text/css">
         #form1 {
-            width: 146px;
-            height: 398px;
+            width: 141px;
+            height: 348px;
         }
     </style>
 </head>
@@ -17,13 +17,16 @@
     <form id="form1" runat="server">
         <div>
           
-            <asp:HyperLink ID="HyperLink1" runat="server">Tareas Genéricas</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/TareasAlumno.aspx">Tareas Genéricas</asp:HyperLink>
+          
+            <br />
           
             <br />
           
         </div>
       
         <asp:HyperLink ID="HyperLink2" runat="server">Tareas propias</asp:HyperLink>
+        <br />
        <br />
         <asp:HyperLink ID="HyperLink3" runat="server">Grupos</asp:HyperLink>
         
@@ -31,6 +34,6 @@
         <br />
         <br />
         <br />
-        VISTA ALUMNO</form>
+        </form>
      </body>
 </html>
