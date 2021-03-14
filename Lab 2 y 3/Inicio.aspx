@@ -36,7 +36,6 @@
                 </td>
                 <td>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tPass" ErrorMessage="Campo requerido" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="tPass" Display="Dynamic" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="([a-zA-Z0-9]{6,})">La contraseña debe contener al menos 6 caracteres alfanuméricos</asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>

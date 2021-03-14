@@ -16,9 +16,13 @@
     <p>
         Seleccionar Asignatura (solo se muestran aquellas en las que está matriculado):</p>
     <p>
-        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="Nombre">
+        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="codigoasig" DataValueField="codigoasig">
         </asp:DropDownList>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS21-14ConnectionString %>" SelectCommand="SELECT [Nombre] FROM [Asignaturas] ORDER BY [Nombre]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS21-14ConnectionString %>" SelectCommand="SELECT GruposClase.codigoasig FROM GruposClase INNER JOIN EstudiantesGrupo ON GruposClase.codigo = EstudiantesGrupo.Grupo WHERE (EstudiantesGrupo.Email = @email)">
+            <SelectParameters>
+                <asp:SessionParameter DefaultValue="" Name="email" SessionField="email" />
+            </SelectParameters>
+        </asp:SqlDataSource>
         </p>
     </form>
     </body>

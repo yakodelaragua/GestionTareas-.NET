@@ -12,6 +12,12 @@
         If (Not exists) Then
             Label1.Text = "El usuario o contraseña son incorrectos"
             tPass.Text = ""
+        Else
+            Session.Add("email", tEmail.Text)
+            HttpContext.Current.Response.Redirect("~/TareasAlumno.aspx")
         End If
+
+
+
     End Sub
 End Class
