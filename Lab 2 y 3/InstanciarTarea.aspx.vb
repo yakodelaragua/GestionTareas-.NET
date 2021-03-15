@@ -13,31 +13,13 @@ Public Class WebForm7
         TBTarea.Text = Request.QueryString("Tarea")
         TBHorasEstimadas.Text = Request.QueryString("Horas")
 
-        If Page.IsPostBack Then
-            dstTareas = Session("datos")
-            dapTareas = Session("adaptador")
-        Else
-            dapTareas = New SqlDataAdapter("SELECT * FROM EstudiantesTareas", conClsf)
-            Dim bldTareas As New SqlCommandBuilder(dapTareas)
-            bldTareas.QuotePrefix = "["
-            bldTareas.QuoteSuffix = "]"
-            dapTareas.Fill(dstTareas, "EstudiantesTareas")
-            tblTareas = dstTareas.Tables("EstudiantesTareas")
-            Session("datos") = dstTareas
-            Session("adaptador") = dapTareas
-        End If
+
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        ' tblTareas = dstTareas.Tables("EstudiantesTareas")
-        'Dim rowTareas As DataRow = tblTareas.NewRow()
-        'rowTareas("Email") = TBUsuario.Text
-        'rowTareas("CodTarea") = TBTarea.Text
-        ' rowTareas("HEstimadas") = TBHorasEstimadas.Text
-        'rowTareas("HReales") = TBHorasReales.Text
-        ' tblTareas.Rows.Add(rowTareas)
+
         accesoDatosSQL.update(TBTarea.Text, TBHorasReales.Text)
-        'dapTareas.Update(tblTareas)
+
     End Sub
 
 
