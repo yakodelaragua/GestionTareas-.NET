@@ -226,12 +226,38 @@ Public Class accesoDatosSQL
         End Try
         Return True
     End Function
+    Public Shared Function tipoUsuario(ByVal email As String)
+        comando = New SqlCommand("SELECT tipo FROM Usuarios WHERE email='" + email + "'", conexion)
+        Dim resul
+
+        Try
+            Dim sol = comando.ExecuteReader()
+            sol.Read()
+            resul = sol.GetString(0)
+            sol.Close()
+
+            If (resul = "Profesor") Then
+                Return 1
+
+            ElseIf (resul = "Alumno") Then
+                Return 2
+
+            Else
+                Return -1
+
+            End If
+        Catch
+            Return 3
+
+        End Try
+    End Function
+
 
     Public Shared Function update(ByVal tarea As String, ByVal hora As Integer) As Integer
+        Dim sql As SqlDataReader
         Try
             Dim st = "update EstudiantesTareas set HReales=" + hora.ToString + " where CodTarea='" + tarea + "';"
             comando = New SqlCommand(st, conexion)
-            Dim sql As SqlDataReader
 
             Try
                 sql = comando.ExecuteReader()
@@ -240,10 +266,11 @@ Public Class accesoDatosSQL
             End Try
 
         Catch e As Exception
+
             Return False
         End Try
+        sql.Close()
         Return True
-
 
     End Function
 End Class

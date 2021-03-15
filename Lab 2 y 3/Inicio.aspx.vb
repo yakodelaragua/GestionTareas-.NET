@@ -14,7 +14,12 @@
             tPass.Text = ""
         Else
             Session.Add("email", tEmail.Text)
-            HttpContext.Current.Response.Redirect("~/TareasAlumno.aspx")
+            Dim t = accesoDatosSQL.tipoUsuario(tEmail.Text)
+            If (t = 1) Then
+                HttpContext.Current.Response.Redirect("~/Profesor.aspx")
+            ElseIf (t = 2) Then
+                HttpContext.Current.Response.Redirect("~/Alumno.aspx")
+            End If
         End If
 
 
