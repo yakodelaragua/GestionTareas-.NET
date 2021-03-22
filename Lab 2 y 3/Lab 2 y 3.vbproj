@@ -92,6 +92,9 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\HAS.xml" />
+    <Content Include="App_Data\SEG.xml" />
+    <Content Include="App_Data\VerTablaTareas.xsl" />
     <Content Include="Web.config" />
     <Content Include="Inicio.aspx" />
     <Content Include="Registro.aspx" />
@@ -104,6 +107,7 @@
     <Content Include="TareasProfesor.aspx" />
     <Content Include="InsertarTarea.aspx" />
     <Content Include="Profesor.aspx" />
+    <Content Include="ImportarTareasXMLDocument.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases.vb" />
@@ -203,6 +207,13 @@
       <DependentUpon>Profesor.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="ImportarTareasXMLDocument.aspx.designer.vb">
+      <DependentUpon>ImportarTareasXMLDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportarTareasXMLDocument.aspx.vb">
+      <DependentUpon>ImportarTareasXMLDocument.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -213,6 +224,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App_Data\tareas.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

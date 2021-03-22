@@ -45,7 +45,7 @@
             </asp:SqlDataSource>
             <br />
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Insertar tareas" />
+            <asp:Button ID="Button1" runat="server" Text="Insertar tareas" style="height: 26px" />
         </div>
     </form>
 </body>

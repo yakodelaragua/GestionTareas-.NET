@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes" ?>
+<tareas  xmlns:has="http://ji.ehu.es/has">
+  <tarea codigo= "HAS20G14-Test1">
+    <descripcion>Test 1 de la asignatura</descripcion>
+    <hestimadas>1</hestimadas>
+    <explotacion>false</explotacion>
+    <tipotarea>Examen</tipotarea>
+  </tarea>
+  <tarea codigo="HAS20G14-Lab4">
+    <descripcion>Laboratorio sobre XML</descripcion>
+    <hestimadas>12</hestimadas>
+    <explotacion>true</explotacion>
+    <tipotarea>Laboratorio</tipotarea>
+  </tarea>
+</tareas>

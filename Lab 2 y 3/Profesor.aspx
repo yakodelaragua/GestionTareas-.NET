@@ -34,6 +34,10 @@
         <br />
         <br />
         <br />
+        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/ImportarTareasXMLDocument.aspx">Importar v. XMLDocument</asp:HyperLink>
+        <br />
+        <br />
+        <asp:HyperLink ID="HyperLink5" runat="server">Exportar</asp:HyperLink>
         </form>
      </body>
 </html>
