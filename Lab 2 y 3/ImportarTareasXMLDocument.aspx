@@ -10,11 +10,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="Nombre">
+            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="codigoasig" DataValueField="codigoasig">
             </asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS21-14ConnectionString %>" SelectCommand="SELECT [Nombre] FROM [Asignaturas] WHERE ([codigo] = @codigo)">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS21-14ConnectionString %>" SelectCommand="SELECT GruposClase.codigoasig FROM ProfesoresGrupo INNER JOIN GruposClase ON ProfesoresGrupo.codigogrupo = GruposClase.codigo WHERE (ProfesoresGrupo.email = @email)">
                 <SelectParameters>
-                    <asp:SessionParameter Name="codigo" SessionField="codigo" Type="String" />
+                    <asp:SessionParameter Name="email" SessionField="email" DefaultValue="blanco@ehu.es" />
                 </SelectParameters>
             </asp:SqlDataSource>
         </div>
