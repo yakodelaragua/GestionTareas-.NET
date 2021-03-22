@@ -108,6 +108,7 @@
     <Content Include="InsertarTarea.aspx" />
     <Content Include="Profesor.aspx" />
     <Content Include="ImportarTareasXMLDocument.aspx" />
+    <Content Include="ExportarTareas.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases.vb" />
@@ -212,6 +213,13 @@
     </Compile>
     <Compile Include="ImportarTareasXMLDocument.aspx.vb">
       <DependentUpon>ImportarTareasXMLDocument.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ExportarTareas.aspx.designer.vb">
+      <DependentUpon>ExportarTareas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportarTareas.aspx.vb">
+      <DependentUpon>ExportarTareas.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
