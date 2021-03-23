@@ -9,7 +9,7 @@ Public Class WebForm12
     Dim tblTareas As New DataTable()
     Dim bldTareas As SqlCommandBuilder
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        ' Xml1.DocumentSource = Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml")
+
         Xml1.TransformSource = Server.MapPath("App_Data/VerTablaTareas.xsl")
 
         If Page.IsPostBack Then
@@ -38,7 +38,7 @@ Public Class WebForm12
         Dim Tareas As XmlNodeList
         Tareas = xd.GetElementsByTagName("tarea")
         Dim nTarea As XmlNode
-        Dim i As Integer
+
         For Each nTarea In Tareas
             tblTareas = dstTareas.Tables("TareasGenericas")
             Dim rowTareas As DataRow = tblTareas.NewRow()
