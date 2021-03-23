@@ -1,15 +1,32 @@
-<?xml version="1.0" standalone="yes"?>
-<tareas  xmlns:has="http://ji.ehu.es/has">
-  <tarea codigo="SEG20G14-Test1">
-    <descripcion>Test 1 de la asignatura</descripcion>
-    <hestimadas>3</hestimadas>
-    <explotacion>false</explotacion>
-    <tipotarea>Examen</tipotarea>
-  </tarea>
-  <tarea codigo="SEG20G14-Lab1">
-    <descripcion>Tareas del trabajo 1 de la asignatura</descripcion>
-    <hestimadas>10</hestimadas>
-    <explotacion>false</explotacion>
-    <tipotarea>Trabajo</tipotarea>
-  </tarea>
-</tareas>
+<Tareas>
+  <Tarea Codigo="SEG">
+    <Descripcion>Ejercicio seguridad</Descripcion>
+    <HEstimadas>4</HEstimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Ejercicio</TipoTarea>
+  </Tarea>
+  <Tarea Codigo="SEG20G14-Lab1">
+    <Descripcion>Tareas del trabajo 1 de la asignatura</Descripcion>
+    <HEstimadas>10</HEstimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Trabajo</TipoTarea>
+  </Tarea>
+  <Tarea Codigo="SEG20G14-Test1">
+    <Descripcion>Test 1 de la asignatura</Descripcion>
+    <HEstimadas>3</HEstimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Examen</TipoTarea>
+  </Tarea>
+  <Tarea Codigo="SEG20-Test1">
+    <Descripcion>Test 12 de la asignatura</Descripcion>
+    <HEstimadas>3</HEstimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Examen</TipoTarea>
+  </Tarea>
+  <Tarea Codigo="SEG20-Trab1">
+    <Descripcion>Tareas del trabajo 1 de la asignatura</Descripcion>
+    <HEstimadas>10</HEstimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Trabajo</TipoTarea>
+  </Tarea>
+</Tareas>
