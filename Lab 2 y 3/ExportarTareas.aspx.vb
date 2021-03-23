@@ -25,6 +25,10 @@ Public Class WebForm13
         tblTareas = dstTareas.Tables.Item(0)
         tblTareas.TableName = "tarea"
         tblTareas.Columns.Item(0).ColumnMapping = MappingType.Attribute
+        For index As Integer = 1 To tblTareas.Columns.Count
+            Dim nameCaps = tblTareas.Columns.Item(index - 1).ColumnName.ToLower
+            tblTareas.Columns.Item(index - 1).ColumnName = nameCaps
+        Next
         dstTareas = tblTareas.DataSet
         dstTareas.DataSetName = "tareas"
         dstTareas.WriteXml(Server.MapPath("App_Data/" + DropDownList1.SelectedValue + ".xml"))
