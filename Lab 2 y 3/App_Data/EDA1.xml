@@ -1,4 +1,5 @@
-<NewDataSet>
+<?xml version="1.0" standalone="yes"?>
+<Tareas>
   <Table Codigo="EDA20-Ej1">
     <Descripcion>Ejercicio sobre listas ligadas</Descripcion>
     <HEstimadas>3</HEstimadas>
@@ -17,4 +18,4 @@
     <Explotacion>true</Explotacion>
     <TipoTarea>Examen</TipoTarea>
   </Table>
-</NewDataSet>
+</Tareas>

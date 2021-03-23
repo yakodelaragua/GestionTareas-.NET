@@ -26,10 +26,8 @@ Public Class WebForm13
         tblTareas.Columns.Item(0).ColumnMapping = MappingType.Attribute
         tblTareas.Columns.Remove("CodAsig")
         dstTareas = tblTareas.DataSet
-        Dim f As FileStream = File.Create(Server.MapPath("App_Data/" + DropDownList1.SelectedValue + ".xml"))
         dstTareas.DataSetName = "Tareas"
-        dstTareas.WriteXml(f)
-        f.Close()
+        dstTareas.WriteXml(Server.MapPath("App_Data/" + DropDownList1.SelectedValue + ".xml"))
         Dim xml As New XmlDocument
         xml.Load(Server.MapPath("App_Data/" + DropDownList1.SelectedValue + ".xml"))
 
