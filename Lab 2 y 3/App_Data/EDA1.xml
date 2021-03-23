@@ -1,21 +1,21 @@
 <?xml version="1.0" standalone="yes"?>
-<Tareas>
-  <Table Codigo="EDA20-Ej1">
+<tareas>
+  <tarea Codigo="EDA20-Ej1">
     <Descripcion>Ejercicio sobre listas ligadas</Descripcion>
     <HEstimadas>3</HEstimadas>
     <Explotacion>true</Explotacion>
     <TipoTarea>Ejercicio</TipoTarea>
-  </Table>
-  <Table Codigo="EDA20-Ex1">
+  </tarea>
+  <tarea Codigo="EDA20-Ex1">
     <Descripcion>examen</Descripcion>
     <HEstimadas>12</HEstimadas>
     <Explotacion>true</Explotacion>
     <TipoTarea>Examen</TipoTarea>
-  </Table>
-  <Table Codigo="EDA20-Ex2">
+  </tarea>
+  <tarea Codigo="EDA20-Ex2">
     <Descripcion>examen</Descripcion>
     <HEstimadas>3</HEstimadas>
     <Explotacion>true</Explotacion>
     <TipoTarea>Examen</TipoTarea>
-  </Table>
-</Tareas>
+  </tarea>
+</tareas>
