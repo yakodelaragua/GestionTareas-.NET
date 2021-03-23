@@ -1,26 +1,20 @@
-<NewDataSet>
-  <TareasGenericas>
-    <Codigo>EDA20-Ej1</Codigo>
+<Tareas>
+  <Tarea Codigo="EDA20-Ej1">
     <Descripcion>Ejercicio sobre listas ligadas</Descripcion>
-    <CodAsig>EDA1</CodAsig>
     <HEstimadas>3</HEstimadas>
     <Explotacion>true</Explotacion>
     <TipoTarea>Ejercicio</TipoTarea>
-  </TareasGenericas>
-  <TareasGenericas>
-    <Codigo>EDA20-Ex1</Codigo>
+  </Tarea>
+  <Tarea Codigo="EDA20-Ex1">
     <Descripcion>examen</Descripcion>
-    <CodAsig>EDA1</CodAsig>
     <HEstimadas>12</HEstimadas>
     <Explotacion>true</Explotacion>
     <TipoTarea>Examen</TipoTarea>
-  </TareasGenericas>
-  <TareasGenericas>
-    <Codigo>EDA20-Ex2</Codigo>
+  </Tarea>
+  <Tarea Codigo="EDA20-Ex2">
     <Descripcion>examen</Descripcion>
-    <CodAsig>EDA1</CodAsig>
     <HEstimadas>3</HEstimadas>
     <Explotacion>true</Explotacion>
     <TipoTarea>Examen</TipoTarea>
-  </TareasGenericas>
-</NewDataSet>
+  </Tarea>
+</Tareas>

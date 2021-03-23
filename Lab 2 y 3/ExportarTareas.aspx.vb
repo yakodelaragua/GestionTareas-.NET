@@ -20,13 +20,17 @@ Public Class WebForm13
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         dapTareas = New SqlDataAdapter("SELECT * FROM TareasGenericas where CodAsig ='" + asig + "'", conClsf)
         bldTareas = New SqlCommandBuilder(dapTareas)
-        dapTareas.Fill(dstTareas, "TareasGenericas")
-        tblTareas = dstTareas.Tables("TareasGenericas")
-        Session("datos") = dstTareas
-        Session("adaptador") = dapTareas
+        dstTareas.DataSetName = "Tareas"
+        dapTareas.Fill(dstTareas, "Tarea")
+        tblTareas = dstTareas.Tables("Tarea")
+        tblTareas.Columns.Item(0).ColumnMapping = MappingType.Attribute
+        tblTareas.Columns.Remove("CodAsig")
+        dstTareas = tblTareas.DataSet
         Dim filename = DropDownList1.SelectedValue + ".xml"
         Dim f As FileStream = File.Create(Server.MapPath("App_Data/" + filename))
         dstTareas.WriteXml(f)
+        f.Close()
+
 
     End Sub
 End Class
