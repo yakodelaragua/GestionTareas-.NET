@@ -57,11 +57,7 @@ Public Class WebForm12
 
         Next
 
-
         lError.Text = "Se han importado las tareas"
-
-
-
 
     End Sub
 
