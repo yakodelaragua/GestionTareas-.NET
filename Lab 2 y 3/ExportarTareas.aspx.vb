@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
 Imports System.Text
+Imports System.Xml
 
 Public Class WebForm13
     Inherits System.Web.UI.Page
@@ -20,16 +21,17 @@ Public Class WebForm13
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         dapTareas = New SqlDataAdapter("SELECT * FROM TareasGenericas where CodAsig ='" + asig + "'", conClsf)
         bldTareas = New SqlCommandBuilder(dapTareas)
-        dstTareas.DataSetName = "Tareas"
-        dapTareas.Fill(dstTareas, "Tarea")
-        tblTareas = dstTareas.Tables("Tarea")
+        dapTareas.Fill(dstTareas)
+        tblTareas = dstTareas.Tables.Item(0)
         tblTareas.Columns.Item(0).ColumnMapping = MappingType.Attribute
         tblTareas.Columns.Remove("CodAsig")
         dstTareas = tblTareas.DataSet
-        Dim filename = DropDownList1.SelectedValue + ".xml"
-        Dim f As FileStream = File.Create(Server.MapPath("App_Data/" + filename))
+        Dim f As FileStream = File.Create(Server.MapPath("App_Data/" + DropDownList1.SelectedValue + ".xml"))
+        dstTareas.DataSetName = "Tareas"
         dstTareas.WriteXml(f)
         f.Close()
+        Dim xml As New XmlDocument
+        xml.Load(Server.MapPath("App_Data/" + DropDownList1.SelectedValue + ".xml"))
 
 
     End Sub
