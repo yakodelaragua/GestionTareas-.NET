@@ -1,10 +1,21 @@
-<?xml version="1.0" standalone="yes" ?>
-<tareas  xmlns:has="http://ji.ehu.es/has">
-  <tarea Codigo="SEG">
-    <descripcion>Ejercicio seguridad</descripcion>
+<?xml version="1.0" standalone="yes"?>
+<tareas>
+  <tarea codigo="SEG">
+    <descripcion>aaaa</descripcion>
     <hestimadas>4</hestimadas>
     <explotacion>false</explotacion>
-    <tipotarea>Ejercicio</tipotarea>
+    <tipotarea>Examen</tipotarea>
   </tarea>
-
+  <tarea codigo="SEG20-Test1">
+    <descripcion>Test 12 de la asignatura</descripcion>
+    <hestimadas>3</hestimadas>
+    <explotacion>false</explotacion>
+    <tipotarea>Examen</tipotarea>
+  </tarea>
+  <tarea codigo="SEG20-Trab1">
+    <descripcion>Tareas del trabajo 1 de la asignatura</descripcion>
+    <hestimadas>10</hestimadas>
+    <explotacion>false</explotacion>
+    <tipotarea>Trabajo</tipotarea>
+  </tarea>
 </tareas>

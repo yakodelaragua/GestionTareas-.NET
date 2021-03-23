@@ -49,15 +49,17 @@ Public Class WebForm12
             rowTareas("Explotacion") = nTarea.ChildNodes(2).ChildNodes(0).Value
             rowTareas("TipoTarea") = nTarea.ChildNodes(3).ChildNodes(0).Value
             tblTareas.Rows.Add(rowTareas)
+            Try
+                dapTareas.Update(tblTareas)
+            Catch ex As Exception
+
+            End Try
 
         Next
 
-        Try
-            dapTareas.Update(tblTareas)
-            lError.Text = "Se han importado las tareas"
-        Catch ex As Exception
-            lError.Text = "Las tareas ya estaban importadas"
-        End Try
+
+        lError.Text = "Se han importado las tareas"
+
 
 
 
