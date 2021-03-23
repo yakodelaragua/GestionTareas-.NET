@@ -1,15 +1,98 @@
-<?xml version="1.0" standalone="yes" ?>
-<tareas  xmlns:has="http://ji.ehu.es/has">
-  <tarea codigo= "HAS20G14-Test1">
-    <descripcion>Test 1 de la asignatura</descripcion>
-    <hestimadas>1</hestimadas>
-    <explotacion>false</explotacion>
-    <tipotarea>Examen</tipotarea>
-  </tarea>
-  <tarea codigo="HAS20G14-Lab4">
-    <descripcion>Laboratorio sobre XML</descripcion>
-    <hestimadas>12</hestimadas>
-    <explotacion>true</explotacion>
-    <tipotarea>Laboratorio</tipotarea>
-  </tarea>
-</tareas>
+<NewDataSet>
+  <TareasGenericas>
+    <Codigo>EDA20-Ej1</Codigo>
+    <Descripcion>Ejercicio sobre listas ligadas</Descripcion>
+    <CodAsig>EDA1</CodAsig>
+    <HEstimadas>3</HEstimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Ejercicio</TipoTarea>
+  </TareasGenericas>
+  <TareasGenericas>
+    <Codigo>EDA20-Ex1</Codigo>
+    <Descripcion>examen</Descripcion>
+    <CodAsig>EDA1</CodAsig>
+    <HEstimadas>12</HEstimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Examen</TipoTarea>
+  </TareasGenericas>
+  <TareasGenericas>
+    <Codigo>EDA20-Ex2</Codigo>
+    <Descripcion>examen</Descripcion>
+    <CodAsig>EDA1</CodAsig>
+    <HEstimadas>3</HEstimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Examen</TipoTarea>
+  </TareasGenericas>
+  <TareasGenericas>
+    <Codigo>has2</Codigo>
+    <Descripcion>aaaa</Descripcion>
+    <CodAsig>HAS</CodAsig>
+    <HEstimadas>4</HEstimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Examen</TipoTarea>
+  </TareasGenericas>
+  <TareasGenericas>
+    <Codigo>HAS20-Lab1</Codigo>
+    <Descripcion>Lab componentes</Descripcion>
+    <CodAsig>HAS</CodAsig>
+    <HEstimadas>6</HEstimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Laboratorio</TipoTarea>
+  </TareasGenericas>
+  <TareasGenericas>
+    <Codigo>HAS20-Lab10</Codigo>
+    <Descripcion>Sobre django</Descripcion>
+    <CodAsig>HAS</CodAsig>
+    <HEstimadas>10</HEstimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Laboratorio</TipoTarea>
+  </TareasGenericas>
+  <TareasGenericas>
+    <Codigo>HAS20-Lab2</Codigo>
+    <Descripcion>Web Forms</Descripcion>
+    <CodAsig>HAS</CodAsig>
+    <HEstimadas>12</HEstimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Laboratorio</TipoTarea>
+  </TareasGenericas>
+  <TareasGenericas>
+    <Codigo>HAS20-Test1</Codigo>
+    <Descripcion>Test 1 de la asignatura</Descripcion>
+    <CodAsig>HAS</CodAsig>
+    <HEstimadas>3</HEstimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>examen</TipoTarea>
+  </TareasGenericas>
+  <TareasGenericas>
+    <Codigo>HAS21-LAB4</Codigo>
+    <Descripcion>Lab sobre ADO.NET</Descripcion>
+    <CodAsig>HAS</CodAsig>
+    <HEstimadas>20</HEstimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Laboratorio</TipoTarea>
+  </TareasGenericas>
+  <TareasGenericas>
+    <Codigo>ISO-Lab1</Codigo>
+    <Descripcion>Laboratorio de SWING</Descripcion>
+    <CodAsig>ISO</CodAsig>
+    <HEstimadas>12</HEstimadas>
+    <Explotacion>true</Explotacion>
+    <TipoTarea>Laboratorio</TipoTarea>
+  </TareasGenericas>
+  <TareasGenericas>
+    <Codigo>SEG20-Test1</Codigo>
+    <Descripcion>Test 12 de la asignatura</Descripcion>
+    <CodAsig>SEG</CodAsig>
+    <HEstimadas>3</HEstimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Examen</TipoTarea>
+  </TareasGenericas>
+  <TareasGenericas>
+    <Codigo>SEG20-Trab1</Codigo>
+    <Descripcion>Tareas del trabajo 1 de la asignatura</Descripcion>
+    <CodAsig>SEG</CodAsig>
+    <HEstimadas>10</HEstimadas>
+    <Explotacion>false</Explotacion>
+    <TipoTarea>Trabajo</TipoTarea>
+  </TareasGenericas>
+</NewDataSet>
