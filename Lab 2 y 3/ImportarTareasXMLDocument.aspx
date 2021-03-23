@@ -15,12 +15,14 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            PROFESOR<br />
-            IMPORTAR TAREAS GENÉRICAS<br />
+            <asp:Panel ID="Panel1" runat="server" BackColor="#CCCCCC" Font-Bold="True" Font-Overline="False" Font-Size="X-Large" Font-Strikeout="False" ForeColor="Black" Height="73px" HorizontalAlign="Center">
+                PROFESOR<br /> IMPORTAR TAREAS GENÉRICAS</asp:Panel>
             <br />
             <table style="width: 100%; height: 231px;">
                 <tr>
                     <td class="auto-style1">
+                        Seleccionar asignatura a importar:<br />
+                        <br />
             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="codigoasig" DataValueField="codigoasig" AutoPostBack="True">
             </asp:DropDownList>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS21-14ConnectionString %>" SelectCommand="SELECT GruposClase.codigoasig FROM ProfesoresGrupo INNER JOIN GruposClase ON ProfesoresGrupo.codigogrupo = GruposClase.codigo WHERE (ProfesoresGrupo.email = @email)">
@@ -38,14 +40,15 @@
                     <td class="auto-style1">
                         <asp:Button ID="Button1" runat="server" Text="IMPORTAR (XMLD)" />
                         <br />
-                        <asp:Label ID="lError" runat="server" Text="lError"></asp:Label>
+                        <br />
+                        <asp:Label ID="lError" runat="server" ForeColor="#00CC00"></asp:Label>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style1">
-                        <asp:HyperLink ID="HyperLink1" runat="server">Menú profesor</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profesor.aspx">Menú profesor</asp:HyperLink>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

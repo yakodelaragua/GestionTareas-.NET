@@ -43,7 +43,6 @@ Public Class WebForm12
             tblTareas = dstTareas.Tables("TareasGenericas")
             Dim rowTareas As DataRow = tblTareas.NewRow()
             rowTareas("Codigo") = nTarea.Attributes.ItemOf(0).Value
-
             rowTareas("Descripcion") = nTarea.ChildNodes(0).ChildNodes(0).Value
             rowTareas("CodAsig") = DropDownList1.SelectedValue
             rowTareas("HEstimadas") = nTarea.ChildNodes(1).ChildNodes(0).Value
@@ -52,15 +51,19 @@ Public Class WebForm12
             tblTareas.Rows.Add(rowTareas)
 
         Next
-        dapTareas.Update(tblTareas)
-        Try
 
+        Try
+            dapTareas.Update(tblTareas)
             lError.Text = "Se han importado las tareas"
         Catch ex As Exception
             lError.Text = "Las tareas ya estaban importadas"
         End Try
 
 
+
+    End Sub
+
+    Protected Sub SqlDataSource1_Selecting(sender As Object, e As SqlDataSourceSelectingEventArgs) Handles SqlDataSource1.Selecting
 
     End Sub
 End Class

@@ -38,31 +38,28 @@
                 <tr>
                     <td class="auto-style5">
           
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/TareasProfesor.aspx">Tareas</asp:HyperLink>
-          
-                        <br />
-                        <br />
-      
-        <asp:HyperLink ID="HyperLink2" runat="server">Asignaturas</asp:HyperLink>
-                        <br />
-                        <br />
-        <asp:HyperLink ID="HyperLink3" runat="server">Grupos</asp:HyperLink>
-        
-      
-                        <br />
-                        <br />
-                        <br />
-        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/ImportarTareasXMLDocument.aspx" BackColor="#CCCCCC" BorderColor="#666666" BorderStyle="Solid" CssClass="auto-style3" Height="44px" Width="141px">Importar v. XMLDocument</asp:HyperLink>
-                        <br />
-                        <br />
-                        <br />
-        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/ExportarTareas.aspx" BackColor="#CCCCCC" BorderColor="#666666" BorderStyle="Solid" CssClass="auto-style4" Height="38px" Width="141px">Exportar</asp:HyperLink>
+                        <asp:Panel ID="Panel1" runat="server" BorderColor="#CCCCCC" BorderStyle="Solid" Height="347px" Width="163px">
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/TareasProfesor.aspx">Tareas</asp:HyperLink>
+                            <br />
+                            <br />
+                            <asp:HyperLink ID="HyperLink2" runat="server">Asignaturas</asp:HyperLink>
+                            <br />
+                            <br />
+                            <asp:HyperLink ID="HyperLink3" runat="server">Grupos</asp:HyperLink>
+                            <br />
+                            <br />
+                            <br />
+                            <asp:HyperLink ID="HyperLink4" runat="server" BackColor="#CCCCCC" BorderColor="#666666" BorderStyle="Solid" CssClass="auto-style3" Height="44px" NavigateUrl="~/ImportarTareasXMLDocument.aspx" Width="141px">Importar v. XMLDocument</asp:HyperLink>
+                            <br />
+                            <br />
+                            <asp:HyperLink ID="HyperLink5" runat="server" BackColor="#CCCCCC" BorderColor="#666666" BorderStyle="Solid" CssClass="auto-style4" Height="38px" NavigateUrl="~/ExportarTareas.aspx" Width="141px">Exportar</asp:HyperLink>
+                        </asp:Panel>
                         <br />
                     </td>
                     <td>
                         <asp:Label ID="Label1" runat="server" Font-Size="XX-Large" Text="Gestión Web de Tareas-Dedicación Profesores"></asp:Label>
                     </td>
-                    <td>&nbsp;</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td class="auto-style5">&nbsp;</td>
