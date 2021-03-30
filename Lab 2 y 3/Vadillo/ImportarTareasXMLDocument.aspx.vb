@@ -28,13 +28,13 @@ Public Class WebForm12
     End Sub
 
     Protected Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownList1.SelectedIndexChanged
-        Xml1.DocumentSource = Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml")
-        Xml1.TransformSource = Server.MapPath("App_Data/VerTablaTareas.xsl")
+        Xml1.DocumentSource = Server.MapPath("Vadillo/App_Data/" & DropDownList1.SelectedValue & ".xml")
+        Xml1.TransformSource = Server.MapPath("Vadillo/App_Data/VerTablaTareas.xsl")
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim xd As New XmlDocument
-        xd.Load(Server.MapPath("App_Data/" & DropDownList1.SelectedValue & ".xml"))
+        xd.Load(Server.MapPath("Vadillo/App_Data/" & DropDownList1.SelectedValue & ".xml"))
         Dim Tareas As XmlNodeList
         Tareas = xd.GetElementsByTagName("tarea")
         Dim nTarea As XmlNode

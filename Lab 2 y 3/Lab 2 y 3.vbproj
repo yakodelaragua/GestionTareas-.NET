@@ -101,14 +101,14 @@
     <Content Include="CambiarPassword.aspx" />
     <Content Include="Confirmar.aspx" />
     <Content Include="App.aspx" />
-    <Content Include="Alumno.aspx" />
-    <Content Include="TareasAlumno.aspx" />
-    <Content Include="InstanciarTarea.aspx" />
-    <Content Include="TareasProfesor.aspx" />
-    <Content Include="InsertarTarea.aspx" />
-    <Content Include="Profesor.aspx" />
-    <Content Include="ImportarTareasXMLDocument.aspx" />
-    <Content Include="ExportarTareas.aspx" />
+    <Content Include="Alumno\Alumno.aspx" />
+    <Content Include="Alumno\TareasAlumno.aspx" />
+    <Content Include="Alumno\InstanciarTarea.aspx" />
+    <Content Include="Profesor\TareasProfesor.aspx" />
+    <Content Include="Profesor\InsertarTarea.aspx" />
+    <Content Include="Profesor\Profesor.aspx" />
+    <Content Include="Vadillo\ImportarTareasXMLDocument.aspx" />
+    <Content Include="Vadillo\ExportarTareas.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases.vb" />
@@ -166,59 +166,59 @@
       <DependentUpon>App.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Alumno.aspx.designer.vb">
+    <Compile Include="Alumno\Alumno.aspx.designer.vb">
       <DependentUpon>Alumno.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Alumno.aspx.vb">
+    <Compile Include="Alumno\Alumno.aspx.vb">
       <DependentUpon>Alumno.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="TareasAlumno.aspx.designer.vb">
+    <Compile Include="Alumno\TareasAlumno.aspx.designer.vb">
       <DependentUpon>TareasAlumno.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TareasAlumno.aspx.vb">
+    <Compile Include="Alumno\TareasAlumno.aspx.vb">
       <DependentUpon>TareasAlumno.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="InstanciarTarea.aspx.designer.vb">
+    <Compile Include="Alumno\InstanciarTarea.aspx.designer.vb">
       <DependentUpon>InstanciarTarea.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InstanciarTarea.aspx.vb">
+    <Compile Include="Alumno\InstanciarTarea.aspx.vb">
       <DependentUpon>InstanciarTarea.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="TareasProfesor.aspx.designer.vb">
+    <Compile Include="Profesor\TareasProfesor.aspx.designer.vb">
       <DependentUpon>TareasProfesor.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TareasProfesor.aspx.vb">
+    <Compile Include="Profesor\TareasProfesor.aspx.vb">
       <DependentUpon>TareasProfesor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="InsertarTarea.aspx.designer.vb">
+    <Compile Include="Profesor\InsertarTarea.aspx.designer.vb">
       <DependentUpon>InsertarTarea.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InsertarTarea.aspx.vb">
+    <Compile Include="Profesor\InsertarTarea.aspx.vb">
       <DependentUpon>InsertarTarea.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Profesor.aspx.designer.vb">
+    <Compile Include="Profesor\Profesor.aspx.designer.vb">
       <DependentUpon>Profesor.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Profesor.aspx.vb">
+    <Compile Include="Profesor\Profesor.aspx.vb">
       <DependentUpon>Profesor.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="ImportarTareasXMLDocument.aspx.designer.vb">
+    <Compile Include="Vadillo\ImportarTareasXMLDocument.aspx.designer.vb">
       <DependentUpon>ImportarTareasXMLDocument.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ImportarTareasXMLDocument.aspx.vb">
+    <Compile Include="Vadillo\ImportarTareasXMLDocument.aspx.vb">
       <DependentUpon>ImportarTareasXMLDocument.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="ExportarTareas.aspx.designer.vb">
+    <Compile Include="Vadillo\ExportarTareas.aspx.designer.vb">
       <DependentUpon>ExportarTareas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ExportarTareas.aspx.vb">
+    <Compile Include="Vadillo\ExportarTareas.aspx.vb">
       <DependentUpon>ExportarTareas.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
@@ -253,6 +253,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

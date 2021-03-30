@@ -33,7 +33,7 @@ Public Class WebForm6
         Dim Usuario = Session("email")
         Dim Horas = GridView1.SelectedRow.Cells(3).Text
 
-        Response.Redirect("InstanciarTarea.aspx?Tarea=" + Tarea + "&Usuario=" + Usuario + "&Horas=" + Horas)
+        Response.Redirect("Alumno/InstanciarTarea.aspx?Tarea=" + Tarea + "&Usuario=" + Usuario + "&Horas=" + Horas)
     End Sub
 
     Protected Sub LinkButton1_Click(sender As Object, e As EventArgs) Handles LinkButton1.Click

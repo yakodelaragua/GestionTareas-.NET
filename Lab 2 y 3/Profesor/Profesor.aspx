@@ -39,7 +39,7 @@
                     <td class="auto-style5">
           
                         <asp:Panel ID="Panel1" runat="server" BorderColor="#CCCCCC" BorderStyle="Solid" Height="347px" Width="163px">
-                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/TareasProfesor.aspx">Tareas</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profesor/TareasProfesor.aspx">Tareas</asp:HyperLink>
                             <br />
                             <br />
                             <asp:HyperLink ID="HyperLink2" runat="server">Asignaturas</asp:HyperLink>
@@ -49,10 +49,10 @@
                             <br />
                             <br />
                             <br />
-                            <asp:HyperLink ID="HyperLink4" runat="server" BackColor="#CCCCCC" BorderColor="#666666" BorderStyle="Solid" CssClass="auto-style3" Height="44px" NavigateUrl="~/ImportarTareasXMLDocument.aspx" Width="141px">Importar v. XMLDocument</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink4" runat="server" BackColor="#CCCCCC" BorderColor="#666666" BorderStyle="Solid" CssClass="auto-style3" Height="44px" NavigateUrl="~/Vadillo/ImportarTareasXMLDocument.aspx" Width="141px">Importar v. XMLDocument</asp:HyperLink>
                             <br />
                             <br />
-                            <asp:HyperLink ID="HyperLink5" runat="server" BackColor="#CCCCCC" BorderColor="#666666" BorderStyle="Solid" CssClass="auto-style4" Height="38px" NavigateUrl="~/ExportarTareas.aspx" Width="141px">Exportar</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink5" runat="server" BackColor="#CCCCCC" BorderColor="#666666" BorderStyle="Solid" CssClass="auto-style4" Height="38px" NavigateUrl="~/Vadillo/ExportarTareas.aspx" Width="141px">Exportar</asp:HyperLink>
                         </asp:Panel>
                         <br />
                     </td>

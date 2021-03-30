@@ -6,7 +6,7 @@
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Response.Redirect("~/InsertarTarea.aspx")
+        Response.Redirect("~/Profesor/InsertarTarea.aspx")
     End Sub
 
     Protected Sub LinkButton1_Click(sender As Object, e As EventArgs) Handles LinkButton1.Click

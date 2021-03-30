@@ -17,8 +17,9 @@
         Dim exists = accesoDatosSQL.estaRegistrado(tEmail.Text)
         If (Not exists) Then
             If (tPass1.Text = tPass2.Text) Then
+                Dim pass As String = encriptarPass(tPass1.Text)
                 accesoDatosSQL.enviarEmail(tEmail.Text, numconfirm)
-                accesoDatosSQL.insertar(tEmail.Text, tName.Text, tSurname.Text, numconfirm, False, rbList.SelectedValue, tPass1.Text, 0)
+                accesoDatosSQL.insertar(tEmail.Text, tName.Text, tSurname.Text, numconfirm, False, rbList.SelectedValue, pass, 0)
                 Label1.Text = "Compruebe la bandeja de entrada de su correo"
                 Label2.Text = ""
             Else
@@ -30,4 +31,21 @@
         End If
 
     End Sub
+
+    Private Function encriptarPass(ByVal pass As String) As String
+        Dim hash As New System.Security.Cryptography.MD5CryptoServiceProvider
+        Dim bytValue() As Byte
+        Dim bytHash() As Byte
+
+        encriptarPass = ""
+        bytValue = System.Text.Encoding.UTF8.GetBytes(pass)
+        bytHash = hash.ComputeHash(bytValue)
+        hash.Clear()
+
+        Dim i As Integer
+        For i = 0 To bytHash.Length - 1
+            encriptarPass &= bytHash(i).ToString("x").PadLeft(2, "0")
+        Next
+
+    End Function
 End Class
