@@ -122,6 +122,15 @@ Partial Public Class WebForm9
     Protected WithEvents GridView1_RoundedCornersExtender As Global.AjaxControlToolkit.RoundedCornersExtender
 
     '''<summary>
+    '''Control UpdatePanel1_UpdatePanelAnimationExtender.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents UpdatePanel1_UpdatePanelAnimationExtender As Global.AjaxControlToolkit.UpdatePanelAnimationExtender
+
+    '''<summary>
     '''Control Button1.
     '''</summary>
     '''<remarks>

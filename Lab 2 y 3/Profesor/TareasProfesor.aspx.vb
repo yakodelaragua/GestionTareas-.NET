@@ -22,5 +22,7 @@
         System.Threading.Thread.Sleep(2000)
     End Sub
 
+    Protected Sub GridView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridView1.SelectedIndexChanged
 
+    End Sub
 End Class

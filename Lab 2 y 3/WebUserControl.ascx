@@ -2,7 +2,7 @@
 
 <asp:ScriptManager ID="ScriptManager1" runat="server">
 </asp:ScriptManager>
-<asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+<asp:UpdatePanel ID="UpdatePanel1" runat="server">
     <ContentTemplate>
         <br />
         USUARIOS LOGUEADOS:
@@ -11,8 +11,8 @@
         <asp:Label ID="lProfesor" runat="server"></asp:Label>
         &nbsp;Profe/s<br />
         <br />
-        <asp:ListBox ID="ListBox2" runat="server" Height="73px" Width="128px"></asp:ListBox>
-        <asp:ListBox ID="ListBox1" runat="server" AutoPostBack="True" Height="74px" Width="135px"></asp:ListBox>
+        <asp:ListBox ID="ListBox2" runat="server" Enabled="False" Height="73px" Width="128px"></asp:ListBox>
+        <asp:ListBox ID="ListBox1" runat="server" Height="74px" Width="135px" Enabled="False"></asp:ListBox>
         <br />
         <asp:Timer ID="Timer1" runat="server" Interval="8000">
         </asp:Timer>
@@ -20,4 +20,6 @@
     </ContentTemplate>
 </asp:UpdatePanel>
 
+<p>
+    &nbsp;</p>
 
