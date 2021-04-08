@@ -27,6 +27,7 @@
                 Else
                     FormsAuthentication.SetAuthCookie("Profesor", True)
                 End If
+                Application("lProfesor").add(Session("email"))
                 HttpContext.Current.Response.Redirect("~/Profesor/Profesor.aspx")
             ElseIf (t = 2) Then
                 Dim lProf As List(Of String) = Application("lProfesor")
@@ -34,6 +35,7 @@
                 Application("lProfesor") = lProf
 
                 FormsAuthentication.SetAuthCookie("Alumno", True)
+                Application("lAlumno").add(Session("email"))
                 HttpContext.Current.Response.Redirect("~/Alumno/Alumno.aspx")
                 End If
             End If
