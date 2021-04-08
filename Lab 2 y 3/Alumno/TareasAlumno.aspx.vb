@@ -38,5 +38,6 @@ Public Class WebForm6
 
     Protected Sub LinkButton1_Click(sender As Object, e As EventArgs) Handles LinkButton1.Click
         Session.Remove("email")
+
     End Sub
 End Class
