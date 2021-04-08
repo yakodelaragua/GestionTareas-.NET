@@ -16,6 +16,9 @@
         .auto-style3 {
             width: 252px;
         }
+        .auto-style5 {
+            height: 28px;
+        }
     </style>
 </head>
 <body>
@@ -39,10 +42,10 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
+                <td colspan="2" class="auto-style5">
             <asp:Button ID="Button1" runat="server" Text="Iniciar sesión" CssClass="auto-style2" Width="251px" />
                 </td>
-                <td>
+                <td class="auto-style5">
                     <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
                 </td>
             </tr>
