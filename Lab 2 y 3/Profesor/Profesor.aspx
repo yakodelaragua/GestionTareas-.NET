@@ -28,7 +28,7 @@
             margin-bottom: 4px;
         }
         .auto-style5 {
-            width: 236px;
+            width: 374px;
         }
     </style>
 </head>
