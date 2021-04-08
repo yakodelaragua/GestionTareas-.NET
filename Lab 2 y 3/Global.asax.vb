@@ -38,7 +38,7 @@ Public Class Global_asax
 
     Sub Application_End(ByVal sender As Object, ByVal e As EventArgs)
         ' Se desencadena cuando finaliza la aplicación
-        If FormsAuthentication.FormsCookieName = "Alumno" Then
+        If Session("tipo") = 2 Then
             Application("lAlumno").remove(Session("email"))
         Else
             Application("lProfesor").remove(Session("email"))
