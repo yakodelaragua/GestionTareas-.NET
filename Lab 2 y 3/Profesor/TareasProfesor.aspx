@@ -40,6 +40,7 @@
                     <ajaxToolkit:BalloonPopupExtender ID="DropDownList1_BalloonPopupExtender" runat="server" BalloonPopupControlID="a" BalloonStyle="Cloud" BehaviorID="DropDownList1_BalloonPopupExtender" CustomCssUrl="" DynamicServicePath="" ExtenderControlID="" TargetControlID="DropDownList1">
                     </ajaxToolkit:BalloonPopupExtender>
                     <br />
+                    <br />
                     <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="Codigo" DataSourceID="SqlDataSource2">
                         <Columns>
                             <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
