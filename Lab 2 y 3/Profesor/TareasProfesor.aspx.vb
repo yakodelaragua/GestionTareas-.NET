@@ -2,7 +2,9 @@
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load, GridView1.DataBinding, DropDownList1.SelectedIndexChanged
+        If (ScriptManager1.IsInAsyncPostBack) Then
 
+        End If
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -15,7 +17,10 @@
 
     End Sub
 
-    Protected Sub SqlDataSource1_Selecting(sender As Object, e As SqlDataSourceSelectingEventArgs) Handles SqlDataSource1.Selecting
 
+    Protected Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownList1.SelectedIndexChanged
+        System.Threading.Thread.Sleep(2000)
     End Sub
+
+
 End Class

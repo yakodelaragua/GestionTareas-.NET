@@ -46,6 +46,10 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -95,6 +99,8 @@
     <Content Include="App_Data\HAS.xml" />
     <Content Include="App_Data\SEG.xml" />
     <Content Include="App_Data\VerTablaTareas.xsl" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\JavaScript.js" />
     <Content Include="Web.config" />
     <Content Include="Inicio.aspx" />
     <Content Include="Registro.aspx" />
@@ -109,9 +115,13 @@
     <Content Include="Profesor\Profesor.aspx" />
     <Content Include="Vadillo\ImportarTareasXMLDocument.aspx" />
     <Content Include="Vadillo\ExportarTareas.aspx" />
+    <Content Include="WebUserControl.ascx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -221,6 +231,13 @@
     <Compile Include="Vadillo\ExportarTareas.aspx.vb">
       <DependentUpon>ExportarTareas.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl.ascx.designer.vb">
+      <DependentUpon>WebUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl.ascx.vb">
+      <DependentUpon>WebUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

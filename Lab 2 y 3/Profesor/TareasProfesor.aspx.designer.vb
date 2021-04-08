@@ -41,6 +41,42 @@ Partial Public Class WebForm9
     Protected WithEvents LinkButton1 As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
+    '''Control SqlDataSource1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+
+    '''<summary>
+    '''Control SqlDataSource2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SqlDataSource2 As Global.System.Web.UI.WebControls.SqlDataSource
+
+    '''<summary>
+    '''Control ScriptManager1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
+
+    '''<summary>
+    '''Control UpdatePanel1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
+
+    '''<summary>
     '''Control DropDownList1.
     '''</summary>
     '''<remarks>
@@ -50,13 +86,13 @@ Partial Public Class WebForm9
     Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control SqlDataSource1.
+    '''Control DropDownList1_BalloonPopupExtender.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+    Protected WithEvents DropDownList1_BalloonPopupExtender As Global.AjaxControlToolkit.BalloonPopupExtender
 
     '''<summary>
     '''Control GridView1.
@@ -68,13 +104,22 @@ Partial Public Class WebForm9
     Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''Control SqlDataSource2.
+    '''Control GridView1_DropShadowExtender.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents SqlDataSource2 As Global.System.Web.UI.WebControls.SqlDataSource
+    Protected WithEvents GridView1_DropShadowExtender As Global.AjaxControlToolkit.DropShadowExtender
+
+    '''<summary>
+    '''Control GridView1_RoundedCornersExtender.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents GridView1_RoundedCornersExtender As Global.AjaxControlToolkit.RoundedCornersExtender
 
     '''<summary>
     '''Control Button1.
