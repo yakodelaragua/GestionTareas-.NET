@@ -5,10 +5,12 @@ Public Class Global_asax
 
     Sub Application_Start(ByVal sender As Object, ByVal e As EventArgs)
         ' Se desencadena al iniciar la aplicación
-        Dim lProfesor As New ListBox
-        Dim lAlumno As New ListBox
+        Dim lProfesor As New List(Of String)
+        Dim lAlumno As New List(Of String)
         Dim cProfesor As New Integer
         Dim cAlumno As New Integer
+
+        lProfesor.Add("aa")
 
         Application("lProfesor") = lProfesor
         Application("lAlumno") = lAlumno
