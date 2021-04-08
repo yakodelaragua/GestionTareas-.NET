@@ -12,4 +12,13 @@ Option Explicit On
 
 
 Partial Public Class WebUserControl
+
+    '''<summary>
+    '''Control ListView1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ListView1 As Global.System.Web.UI.WebControls.ListView
 End Class
