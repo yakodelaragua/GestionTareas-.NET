@@ -10,8 +10,6 @@ Public Class Global_asax
         Dim cProfesor As New Integer
         Dim cAlumno As New Integer
 
-        lProfesor.Add("aa")
-        lProfesor.Add("b")
         Application("lProfesor") = lProfesor
         Application("lAlumno") = lAlumno
 
