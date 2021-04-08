@@ -10,8 +10,6 @@ Public Class Global_asax
         Dim cProfesor As New Integer
         Dim cAlumno As New Integer
 
-        lProfesor.Add("aa")
-
         Application("lProfesor") = lProfesor
         Application("lAlumno") = lAlumno
 
@@ -19,6 +17,7 @@ Public Class Global_asax
 
     Sub Session_Start(ByVal sender As Object, ByVal e As EventArgs)
         ' Se desencadena al iniciar la sesión
+
     End Sub
 
     Sub Application_BeginRequest(ByVal sender As Object, ByVal e As EventArgs)
