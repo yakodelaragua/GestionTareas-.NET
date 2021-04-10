@@ -12,9 +12,7 @@
     End Sub
 
     Protected Sub LinkButton1_Click(sender As Object, e As EventArgs) Handles LinkButton1.Click
-        Session.Remove("email")
-        Response.Redirect("~/Inicio.aspx")
-
+        Response.Redirect("~/Logout.aspx")
     End Sub
 
 

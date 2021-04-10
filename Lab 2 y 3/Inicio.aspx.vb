@@ -19,9 +19,9 @@
         Else
             Session.Add("email", tEmail.Text)
             Dim t = accesoDatosSQL.tipoUsuario(tEmail.Text)
-
+            Session.Add("tipo", t)
             If (t = 1) Then
-                Session("tipo") = 1
+
                 If (tEmail.Text = "vadillo@ehu.es") Then
                     FormsAuthentication.SetAuthCookie("Vadillo", True)
                 Else
@@ -30,7 +30,6 @@
                 Application("lProfesor").add(Session("email"))
                 HttpContext.Current.Response.Redirect("~/Profesor/Profesor.aspx")
             ElseIf (t = 2) Then
-                Session("tipo") = 2
                 FormsAuthentication.SetAuthCookie("Alumno", True)
                 Application("lAlumno").add(Session("email"))
                 HttpContext.Current.Response.Redirect("~/Alumno/Alumno.aspx")

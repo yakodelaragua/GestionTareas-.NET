@@ -43,6 +43,9 @@
         <br />
         <br />
         <uc1:WebUserControl ID="WebUserControl1" runat="server" />
+        <p>
+        <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Logout.aspx">Cerrar Sesión</asp:LinkButton>
+        </p>
         </form>
      </body>
 </html>

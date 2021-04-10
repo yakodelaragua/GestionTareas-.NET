@@ -115,6 +115,7 @@
     <Content Include="Profesor\Profesor.aspx" />
     <Content Include="Vadillo\ImportarTareasXMLDocument.aspx" />
     <Content Include="Vadillo\ExportarTareas.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="WebUserControl.ascx" />
   </ItemGroup>
   <ItemGroup>
@@ -230,6 +231,13 @@
     </Compile>
     <Compile Include="Vadillo\ExportarTareas.aspx.vb">
       <DependentUpon>ExportarTareas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="WebUserControl.ascx.designer.vb">

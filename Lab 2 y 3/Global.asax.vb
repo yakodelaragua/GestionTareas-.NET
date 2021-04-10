@@ -36,15 +36,12 @@ Public Class Global_asax
         ' Se desencadena cuando finaliza la sesión
         If Session("tipo") = 2 Then
             Application("lAlumno").Remove(Session("email"))
-
         Else
             Application("lProfesor").Remove(Session("email"))
         End If
     End Sub
 
     Sub Application_End(ByVal sender As Object, ByVal e As EventArgs)
-        ' Se desencadena cuando finaliza la aplicación
-
 
     End Sub
 

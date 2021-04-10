@@ -54,7 +54,7 @@
             </SelectParameters>
         </asp:SqlDataSource>
         </p>
-        <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Inicio.aspx">Cerrar Sesión</asp:LinkButton>
+        <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Logout.aspx">Cerrar Sesión</asp:LinkButton>
     </form>
     </body>
 </html>
