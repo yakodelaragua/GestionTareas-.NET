@@ -7,8 +7,6 @@ Public Class Global_asax
         ' Se desencadena al iniciar la aplicación
         Dim lProfesor As New List(Of String)
         Dim lAlumno As New List(Of String)
-        Dim cProfesor As New Integer
-        Dim cAlumno As New Integer
 
         Application("lProfesor") = lProfesor
         Application("lAlumno") = lAlumno
