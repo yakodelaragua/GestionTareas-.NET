@@ -53,7 +53,7 @@ Public Class accesoDatosSQL
             Try
                 sql = comando.ExecuteReader()
             Catch ex As Exception
-                Return ex.Message
+                Return -1
             End Try
             If sql.HasRows Then
                 sql.Close()
@@ -63,7 +63,7 @@ Public Class accesoDatosSQL
                 Return False
             End If
         Catch ex As Exception
-            Return ex.Message
+            Return -1
         End Try
         Return False
     End Function

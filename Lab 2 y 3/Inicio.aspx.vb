@@ -8,33 +8,38 @@
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        accesoDatosSQL.Conectar()
+        Try
+            accesoDatosSQL.Conectar()
 
-        Dim pass As String = encriptarPass(tPass.Text)
-        Dim exists = accesoDatosSQL.iniciarSesion(tEmail.Text, pass)
+            Dim pass As String = encriptarPass(tPass.Text)
+            Dim exists = accesoDatosSQL.iniciarSesion(tEmail.Text, pass)
 
-        If (Not exists) Then
-            Label1.Text = "El usuario o contraseña son incorrectos"
-            tPass.Text = ""
-        Else
-            Session.Add("email", tEmail.Text)
-            Dim t = accesoDatosSQL.tipoUsuario(tEmail.Text)
-            Session.Add("tipo", t)
-            If (t = 1) Then
+            If (Not exists) Then
+                Label1.Text = "El usuario o contraseña son incorrectos"
+                tPass.Text = ""
+            Else
+                Session.Add("email", tEmail.Text)
+                Dim t = accesoDatosSQL.tipoUsuario(tEmail.Text)
+                Session.Add("tipo", t)
+                If (t = 1) Then
 
-                If (tEmail.Text = "vadillo@ehu.es") Then
-                    FormsAuthentication.SetAuthCookie("Vadillo", True)
-                Else
-                    FormsAuthentication.SetAuthCookie("Profesor", True)
+                    If (tEmail.Text = "vadillo@ehu.es") Then
+                        FormsAuthentication.SetAuthCookie("Vadillo", True)
+                    Else
+                        FormsAuthentication.SetAuthCookie("Profesor", True)
+                    End If
+                    Application("lProfesor").add(Session("email"))
+                    HttpContext.Current.Response.Redirect("~/Profesor/Profesor.aspx")
+                ElseIf (t = 2) Then
+                    FormsAuthentication.SetAuthCookie("Alumno", True)
+                    Application("lAlumno").add(Session("email"))
+                    HttpContext.Current.Response.Redirect("~/Alumno/Alumno.aspx")
                 End If
-                Application("lProfesor").add(Session("email"))
-                HttpContext.Current.Response.Redirect("~/Profesor/Profesor.aspx")
-            ElseIf (t = 2) Then
-                FormsAuthentication.SetAuthCookie("Alumno", True)
-                Application("lAlumno").add(Session("email"))
-                HttpContext.Current.Response.Redirect("~/Alumno/Alumno.aspx")
             End If
-        End If
+        Catch ex As Exception
+            Label1.Text = ex.StackTrace
+        End Try
+
 
     End Sub
 
