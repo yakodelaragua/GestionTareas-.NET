@@ -2,9 +2,6 @@
     Inherits System.Web.UI.Page
     Private valido As Boolean = False
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        If (ScriptManager1.IsInAsyncPostBack) Then
-
-        End If
         Dim result As String
         result = accesoDatosSQL.Conectar()
 
@@ -55,13 +52,6 @@
 
     End Function
 
-    Protected Sub Button1_Click1(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim us As New Matriculas.Matriculas
-        Dim t As String
-        t = tEmail.Text
-        Label1.Text = us.comprobar(t)
-    End Sub
-
     Protected Sub tEmail_TextChanged(sender As Object, e As EventArgs) Handles tEmail.TextChanged
         Dim us As New Matriculas.Matriculas
         If us.comprobar(tEmail.Text).Equals("SI") Then
@@ -75,7 +65,4 @@
         End If
     End Sub
 
-    Protected Sub rbList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles rbList.SelectedIndexChanged
-
-    End Sub
 End Class

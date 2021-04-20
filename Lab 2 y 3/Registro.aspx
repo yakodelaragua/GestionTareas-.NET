@@ -21,26 +21,15 @@
             width: 88px;
             height: 26px;
         }
-        .auto-style7 {
-            width: 1043px;
-            height: 26px;
-        }
         .auto-style8 {
             width: 750px;
             height: 26px;
-        }
-        .auto-style9 {
-            width: 1043px;
         }
         .auto-style10 {
             width: 750px;
         }
         .auto-style11 {
             width: 88px;
-            height: 39px;
-        }
-        .auto-style12 {
-            width: 752px;
             height: 39px;
         }
         .auto-style13 {
@@ -66,7 +55,6 @@
         </div>
         <br />
         <p>
-            <asp:Button ID="Button1" runat="server" Text="Comprobar matricula" />
             <asp:ScriptManager ID="ScriptManager1" runat="server">
                             </asp:ScriptManager>
         </p>
@@ -86,7 +74,7 @@
                         <td class="auto-style13">
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tEmail" Display="Dynamic" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">Formato de email no válido</asp:RegularExpressionValidator>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tEmail" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Campo obligatorio</asp:RequiredFieldValidator>
-                            <asp:Label ID="LMatriculado" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="LMatriculado" runat="server"></asp:Label>
                         </td>
                     </tr>
                     <tr>
