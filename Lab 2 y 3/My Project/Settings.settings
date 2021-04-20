@@ -2,6 +2,9 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
   <Profiles />
   <Settings>
+    <Setting Name="Lab_2_y_3_Matricula_Matriculas" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://ehusw.es/jav/ServiciosWeb/comprobarmatricula.php</Value>
+    </Setting>
     <Setting Name="Lab_2_y_3_Matriculas_Matriculas" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://ehusw.es/jav/ServiciosWeb/comprobarmatricula.php</Value>
     </Setting>
