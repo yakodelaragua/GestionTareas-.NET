@@ -10,8 +10,6 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Lab 2 y 3", "Lab 2 y 3\Lab 
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Servicio Web", "Servicio Web\Servicio Web.vbproj", "{A0A3377D-BA6B-45BE-9916-1CCA1F8835AC}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WebApplication1", "WebApplication1\WebApplication1.vbproj", "{0B7F3AA5-0D48-4892-9170-42C6910AF7B4}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,10 +20,6 @@ Global
 		{D3E02F3E-AA15-4E83-AA3E-EE76636CAFBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3E02F3E-AA15-4E83-AA3E-EE76636CAFBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3E02F3E-AA15-4E83-AA3E-EE76636CAFBA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0B7F3AA5-0D48-4892-9170-42C6910AF7B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0B7F3AA5-0D48-4892-9170-42C6910AF7B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0B7F3AA5-0D48-4892-9170-42C6910AF7B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0B7F3AA5-0D48-4892-9170-42C6910AF7B4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A0A3377D-BA6B-45BE-9916-1CCA1F8835AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A0A3377D-BA6B-45BE-9916-1CCA1F8835AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0A3377D-BA6B-45BE-9916-1CCA1F8835AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
