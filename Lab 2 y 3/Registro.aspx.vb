@@ -1,4 +1,6 @@
-﻿Public Class Registro
+﻿Imports System.Drawing
+
+Public Class Registro
     Inherits System.Web.UI.Page
     Private valido As Boolean = False
     Private pass As String
@@ -75,12 +77,16 @@
         Dim nSeguridad As Integer = ws.passSecurity(tPass1.Text)
         If nSeguridad = 0 Then
             LSeguridad.Text = "Contraseña no segura"
+            LSeguridad.ForeColor = Color.Red
         ElseIf nSeguridad = 1 Then
             LSeguridad.Text = "Seguridad baja"
+            LSeguridad.ForeColor = Color.Red
         ElseIf nSeguridad = 2 Then
             LSeguridad.Text = "Seguridad media"
+            LSeguridad.ForeColor = Color.Orange
         Else
             LSeguridad.Text = "Seguridad alta"
+            LSeguridad.ForeColor = Color.Green
         End If
     End Sub
 End Class
