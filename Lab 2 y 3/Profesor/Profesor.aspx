@@ -30,6 +30,13 @@
         .auto-style5 {
             width: 374px;
         }
+        .auto-style6 {
+            width: 374px;
+            height: 378px;
+        }
+        .auto-style7 {
+            height: 378px;
+        }
     </style>
 </head>
 <body>
@@ -38,7 +45,7 @@
           
             <table class="auto-style2">
                 <tr>
-                    <td class="auto-style5">
+                    <td class="auto-style6">
           
                         <asp:Panel ID="Panel1" runat="server" BorderColor="#CCCCCC" BorderStyle="Solid" Height="347px" Width="163px">
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Profesor/TareasProfesor.aspx">Tareas</asp:HyperLink>
@@ -55,13 +62,16 @@
                             <br />
                             <br />
                             <asp:HyperLink ID="HyperLink5" runat="server" BackColor="#CCCCCC" BorderColor="#666666" BorderStyle="Solid" CssClass="auto-style4" Height="38px" NavigateUrl="~/Vadillo/ExportarTareas.aspx" Width="141px">Exportar</asp:HyperLink>
+                            <br />
+                            <br />
+                            <asp:HyperLink ID="HyperLink6" runat="server" BackColor="#CCCCCC" BorderColor="#666666" BorderStyle="Solid" CssClass="auto-style4" Height="38px" NavigateUrl="~/Vadillo/coordinador.aspx" Width="141px">Dedicación acumulada</asp:HyperLink>
                         </asp:Panel>
                         <br />
                     </td>
-                    <td>
+                    <td class="auto-style7">
                         <asp:Label ID="Label1" runat="server" Font-Size="XX-Large" Text="Gestión Web de Tareas-Dedicación Profesores"></asp:Label>
                     </td>
-                    <td></td>
+                    <td class="auto-style7"></td>
                 </tr>
                 <tr>
                     <td class="auto-style5">
@@ -73,7 +83,6 @@
                 <tr>
                     <td class="auto-style5">
         <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Logout.aspx">Cerrar Sesión</asp:LinkButton>
-                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Vadillo/coordinador.aspx">HyperLink</asp:HyperLink>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
