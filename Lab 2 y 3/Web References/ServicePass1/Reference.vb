@@ -24,7 +24,7 @@ Imports System.Xml.Serialization
 Namespace ServicePass1
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code"),  _
      System.Web.Services.WebServiceBindingAttribute(Name:="WebService1Soap", [Namespace]:="http://tempuri.org/")>  _
@@ -38,7 +38,7 @@ Namespace ServicePass1
         '''<remarks/>
         Public Sub New()
             MyBase.New
-            Me.Url = Global.Lab_2_y_3.My.MySettings.Default.Lab_2_y_3_ServicePass1_WebService1
+            Me.Url = Global.Lab_2_y_3.My.MySettings.Default.Lab_2_y_3_ServicePass11_WebService1
             If (Me.IsLocalFileSystemWebService(Me.Url) = true) Then
                 Me.UseDefaultCredentials = true
                 Me.useDefaultCredentialsSetExplicitly = false
@@ -121,11 +121,11 @@ Namespace ServicePass1
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")>  _
     Public Delegate Sub passSecurityCompletedEventHandler(ByVal sender As Object, ByVal e As passSecurityCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class passSecurityCompletedEventArgs

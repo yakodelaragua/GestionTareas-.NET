@@ -96,7 +96,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("https://localhost:44321/passSecurity.asmx")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("https://serviciowebcontraseñas.azurewebsites.net/passSecurity.asmx")>  _
         Public ReadOnly Property Lab_2_y_3_ServicePass1_WebService1() As String
             Get
                 Return CType(Me("Lab_2_y_3_ServicePass1_WebService1"),String)
