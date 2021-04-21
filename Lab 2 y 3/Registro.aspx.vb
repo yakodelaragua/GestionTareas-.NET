@@ -1,9 +1,14 @@
 ﻿Public Class Registro
     Inherits System.Web.UI.Page
     Private valido As Boolean = False
+    Private pass As String
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim result As String
         result = accesoDatosSQL.Conectar()
+        If ScriptManager1.IsInAsyncPostBack Then
+            Dim pwd As String = tPass1.Text
+            tPass1.Attributes.Add("value", pwd)
+        End If
 
 
     End Sub
@@ -65,4 +70,16 @@
         End If
     End Sub
 
+    Protected Sub tPass1_TextChanged(sender As Object, e As EventArgs) Handles tPass1.TextChanged
+        Dim nSeguridad As Integer = 0
+        If nSeguridad = 0 Then
+            LSeguridad.Text = "Contraseña no segura"
+        ElseIf nSeguridad = 1 Then
+            LSeguridad.Text = "Seguridad baja"
+        ElseIf nSeguridad = 2 Then
+            LSeguridad.Text = "Seguridad media"
+        Else
+            LSeguridad.Text = "Seguridad alta"
+        End If
+    End Sub
 End Class

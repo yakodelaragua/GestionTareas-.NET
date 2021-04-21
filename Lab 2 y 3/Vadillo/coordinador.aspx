@@ -10,28 +10,34 @@
 <body>
     <form id="form1" runat="server">
         <div>
-                        <br />
-                        <asp:Label ID="Label2" runat="server" Text="PROYECTO GESTIÓN DE TAREAS COORDINADOR DE TAREAS"></asp:Label>
-                        <br />
-                                <br />
-                        <br />
+
+                        <asp:Panel ID="Panel1" runat="server" Height="102px" Direction="LeftToRight" HorizontalAlign="Left" BackColor="Silver">
+                            <br />
+                            <br />
+                                                    <asp:Label ID="Label2" runat="server" Text="PROYECTO GESTIÓN DE TAREAS COORDINADOR DE TAREAS" BackColor="Silver" BorderColor="Black" Font-Size="X-Large"></asp:Label>
+
+                                                    <br />
+                                                    <br />
+
+                        </asp:Panel>
 
                         <asp:ScriptManager ID="ScriptManager1" runat="server">
                         </asp:ScriptManager>
-<br />
+                        <br />
+                        Selecciona la asignatura:<br />
                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                             <ContentTemplate>
-<br />
                                 <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="codigo" DataValueField="codigo" Height="16px" Width="181px">
                                     <asp:ListItem Selected="True"></asp:ListItem>
                                 </asp:DropDownList>
-<br />
+                                <br />
                                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS21-14ConnectionString %>" SelectCommand="SELECT [codigo] FROM [Asignaturas]"></asp:SqlDataSource>
-<br />
+                                <br />
+                                <asp:Label ID="Label3" runat="server" Text="La media de dedicación es:"></asp:Label>
                                 <asp:Label ID="Label1" runat="server" Font-Size="Medium"></asp:Label>
-<br />
-<br />
-<br />
+                                <br />
+                                <br />
+                                <br />
                             </ContentTemplate>
                         </asp:UpdatePanel>
 <br />

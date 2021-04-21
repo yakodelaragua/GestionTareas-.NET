@@ -70,6 +70,9 @@
                              <asp:TextBox ID="tEmail" runat="server" AutoPostBack="True" Width="250px" Wrap="False"></asp:TextBox>
                              
                                 
+                             <br />
+                             
+                                
                         </td>
                         <td class="auto-style13">
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tEmail" Display="Dynamic" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">Formato de email no válido</asp:RegularExpressionValidator>
@@ -81,6 +84,7 @@
                         <td class="auto-style6">Nombre</td>
                         <td class="auto-style15">
                             <asp:TextBox ID="tName" runat="server" Width="250px"></asp:TextBox>
+                            <br />
                         </td>
                         <td class="auto-style8">
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tName" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Campo obligatorio</asp:RequiredFieldValidator>
@@ -90,6 +94,7 @@
                         <td class="auto-style6">Apellidos</td>
                         <td class="auto-style15">
                             <asp:TextBox ID="tSurname" runat="server" Width="250px"></asp:TextBox>
+                            <br />
                         </td>
                         <td class="auto-style8">
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tSurname" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Campo obligatorio</asp:RequiredFieldValidator>
@@ -98,7 +103,9 @@
                     <tr>
                         <td class="auto-style2">Password</td>
                         <td class="auto-style16">
-                            <asp:TextBox ID="tPass1" runat="server" ReadOnly="False" TextMode="Password" Width="250px"></asp:TextBox>
+                            <asp:TextBox ID="tPass1" runat="server" ReadOnly="False" TextMode="Password" Width="250px" AutoPostBack="True"></asp:TextBox>
+                            <br />
+                            <asp:Label ID="LSeguridad" runat="server"></asp:Label>
                         </td>
                         <td class="auto-style10">
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="tPass1" Display="Dynamic" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="([A-Za-z0-9]){6,}">La contraseña debe contener al menos 6 caracteres alfanuméricos</asp:RegularExpressionValidator>
@@ -145,6 +152,7 @@
             </ContentTemplate>
             <Triggers>
                 <asp:AsyncPostBackTrigger ControlID="tEmail" EventName="TextChanged" />
+                <asp:AsyncPostBackTrigger ControlID="tPass1" EventName="TextChanged" />
             </Triggers>
         </asp:UpdatePanel>
     </form>
