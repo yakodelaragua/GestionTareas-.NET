@@ -133,6 +133,9 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\PublishProfiles\ServicioWeb2114 - FTP.pubxml" />
+    <None Include="My Project\PublishProfiles\ServicioWeb2114 - Web Deploy.pubxml" />
+    <None Include="My Project\PublishProfiles\ServicioWeb2114 - Web Deploy1.pubxml" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>

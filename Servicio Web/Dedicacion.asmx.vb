@@ -28,10 +28,17 @@ Public Class WebService1
             Dim reader = comando.ExecuteReader()
             If reader.HasRows Then
                 reader.Read()
-                Dim resul = reader.GetInt32(0)
-                conexion.Close()
-                reader.Close()
-                Return resul
+                Try
+                    Dim resul = reader.GetInt32(0)
+                    conexion.Close()
+                    reader.Close()
+                    Return resul
+                Catch ex As Exception
+                    conexion.Close()
+                    reader.Close()
+                    Return 0
+                End Try
+
             Else
                 reader.Close()
                 conexion.Close()

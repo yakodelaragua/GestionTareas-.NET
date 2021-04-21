@@ -32,6 +32,15 @@ Partial Public Class WebForm15
     Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''Control ScriptManager1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
+
+    '''<summary>
     '''Control UpdatePanel1.
     '''</summary>
     '''<remarks>
@@ -57,15 +66,6 @@ Partial Public Class WebForm15
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
-
-    '''<summary>
-    '''Control Button1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control Label1.

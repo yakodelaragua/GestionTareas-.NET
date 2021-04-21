@@ -56,10 +56,10 @@
   </wsdl:binding>
   <wsdl:service name="WebService1">
     <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
-      <soap:address location="https://localhost:44344/Dedicacion.asmx" />
+      <soap:address location="https://servicioweb2114.azurewebsites.net/Dedicacion.asmx" />
     </wsdl:port>
     <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
-      <soap12:address location="https://localhost:44344/Dedicacion.asmx" />
+      <soap12:address location="https://servicioweb2114.azurewebsites.net/Dedicacion.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

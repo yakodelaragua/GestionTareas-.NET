@@ -73,7 +73,7 @@
                 <tr>
                     <td class="auto-style5">
         <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Logout.aspx">Cerrar Sesión</asp:LinkButton>
-                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/coordinador.aspx">HyperLink</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Vadillo/coordinador.aspx">HyperLink</asp:HyperLink>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

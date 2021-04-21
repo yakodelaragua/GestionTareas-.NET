@@ -100,18 +100,9 @@
     <Content Include="App_Data\HAS.xml" />
     <Content Include="App_Data\SEG.xml" />
     <Content Include="App_Data\VerTablaTareas.xsl" />
-    <None Include="Connected Services\Dedicacion\Dedicacion.disco" />
-    <None Include="Connected Services\Dedicacion\configuration91.svcinfo" />
-    <None Include="Connected Services\Dedicacion\configuration.svcinfo" />
-    <Content Include="Connected Services\Dedicacion\Lab_2_y_3.Dedicacion.dedAcumuladaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\Dedicacion\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.vb</LastGenOutput>
-    </None>
     <Content Include="Global.asax" />
     <Content Include="Scripts\JavaScript.js" />
+    <None Include="Web References\Dedicacion\Dedicacion.disco" />
     <Content Include="Web.config" />
     <Content Include="Inicio.aspx" />
     <Content Include="Registro.aspx" />
@@ -127,16 +118,11 @@
     <Content Include="Vadillo\ImportarTareasXMLDocument.aspx" />
     <Content Include="Vadillo\ExportarTareas.aspx" />
     <Content Include="Logout.aspx" />
-    <Content Include="coordinador.aspx" />
+    <Content Include="Vadillo\coordinador.aspx" />
     <Content Include="WebUserControl.ascx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases.vb" />
-    <Compile Include="Connected Services\Dedicacion\Reference.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -257,12 +243,17 @@
       <DependentUpon>Logout.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="coordinador.aspx.designer.vb">
+    <Compile Include="Vadillo\coordinador.aspx.designer.vb">
       <DependentUpon>coordinador.aspx</DependentUpon>
     </Compile>
-    <Compile Include="coordinador.aspx.vb">
+    <Compile Include="Vadillo\coordinador.aspx.vb">
       <DependentUpon>coordinador.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Web References\Dedicacion\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\Matriculas\Reference.vb">
       <AutoGen>True</AutoGen>
@@ -289,7 +280,6 @@
     <None Include="App_Data\tareas.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\Dedicacion\Dedicacion.wsdl" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -302,6 +292,11 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="Web References\Dedicacion\Dedicacion.wsdl" />
+    <Content Include="Web References\Dedicacion\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </Content>
     <None Include="Web References\Matriculas\comprobarmatricula.wsdl" />
     <Content Include="Web References\Matriculas\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -343,15 +338,23 @@
       <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>Lab_2_y_3_Matriculas_Matriculas</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="https://servicioweb2114.azurewebsites.net/Dedicacion.asmx%3fop=dedAcumulada">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Dedicacion\</RelPath>
+      <UpdateFromURL>https://servicioweb2114.azurewebsites.net/Dedicacion.asmx%3fop=dedAcumulada</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Lab_2_y_3_Dedicacion_WebService1</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\Dedicacion\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
