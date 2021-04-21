@@ -73,7 +73,7 @@ Public Class Registro
     End Sub
 
     Protected Sub tPass1_TextChanged(sender As Object, e As EventArgs) Handles tPass1.TextChanged
-        Dim ws As New ServicePass1.WebService1
+        Dim ws As New ServicePass11.WebService1
         Dim nSeguridad As Integer = ws.passSecurity(tPass1.Text)
         If nSeguridad = 0 Then
             LSeguridad.Text = "Contraseña no segura"

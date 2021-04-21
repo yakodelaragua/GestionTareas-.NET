@@ -131,15 +131,6 @@ Partial Public Class Registro
     Protected WithEvents LSeguridad As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control RegularExpressionValidator2.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents RegularExpressionValidator2 As Global.System.Web.UI.WebControls.RegularExpressionValidator
-
-    '''<summary>
     '''Control RequiredFieldValidator4.
     '''</summary>
     '''<remarks>
@@ -156,15 +147,6 @@ Partial Public Class Registro
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents tPass2 As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control RegularExpressionValidator3.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents RegularExpressionValidator3 As Global.System.Web.UI.WebControls.RegularExpressionValidator
 
     '''<summary>
     '''Control RequiredFieldValidator5.

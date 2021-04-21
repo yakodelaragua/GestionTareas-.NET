@@ -108,7 +108,6 @@
                             <asp:Label ID="LSeguridad" runat="server"></asp:Label>
                         </td>
                         <td class="auto-style10">
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="tPass1" Display="Dynamic" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="([A-Za-z0-9]){6,}">La contraseña debe contener al menos 6 caracteres alfanuméricos</asp:RegularExpressionValidator>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="tPass1" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Campo obligatorio</asp:RequiredFieldValidator>
                         </td>
                     </tr>
@@ -118,7 +117,6 @@
                             <asp:TextBox ID="tPass2" runat="server" TextMode="Password" Width="250px"></asp:TextBox>
                         </td>
                         <td class="auto-style10">
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="tPass2" Display="Dynamic" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="([A-Za-z0-9]){6,}">La contraseña debe contener al menos 6 caracteres alfanuméricos</asp:RegularExpressionValidator>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="tPass2" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Campo obligatorio</asp:RequiredFieldValidator>
                         </td>
                     </tr>

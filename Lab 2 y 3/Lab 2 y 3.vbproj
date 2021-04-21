@@ -103,6 +103,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\JavaScript.js" />
     <None Include="Web References\Dedicacion\Dedicacion.disco" />
+    <None Include="Web References\ServicePass11\passSecurity.disco" />
     <Content Include="Web.config" />
     <Content Include="Inicio.aspx" />
     <Content Include="Registro.aspx" />
@@ -260,6 +261,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\ServicePass11\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="WebUserControl.ascx.designer.vb">
       <DependentUpon>WebUserControl.ascx</DependentUpon>
     </Compile>
@@ -299,6 +305,11 @@
     </Content>
     <None Include="Web References\Matriculas\comprobarmatricula.wsdl" />
     <Content Include="Web References\Matriculas\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </Content>
+    <None Include="Web References\ServicePass11\passSecurity.wsdl" />
+    <Content Include="Web References\ServicePass11\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
     </Content>
@@ -348,6 +359,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>Lab_2_y_3_Dedicacion_WebService1</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://serviciowebcontraseñas.azurewebsites.net/passSecurity.asmx%3fop=passSecurity">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServicePass11\</RelPath>
+      <UpdateFromURL>https://serviciowebcontraseñas.azurewebsites.net/passSecurity.asmx%3fop=passSecurity</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Lab_2_y_3_ServicePass11_WebService1</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
