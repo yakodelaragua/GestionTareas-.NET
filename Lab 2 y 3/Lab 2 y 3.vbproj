@@ -103,6 +103,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\JavaScript.js" />
     <None Include="Web References\Dedicacion\Dedicacion.disco" />
+    <None Include="Web References\ServicePass1\passSecurity.disco" />
     <Content Include="Web.config" />
     <Content Include="Inicio.aspx" />
     <Content Include="Registro.aspx" />
@@ -260,6 +261,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\ServicePass1\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="WebUserControl.ascx.designer.vb">
       <DependentUpon>WebUserControl.ascx</DependentUpon>
     </Compile>
@@ -302,6 +308,11 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
     </Content>
+    <None Include="Web References\ServicePass1\passSecurity.wsdl" />
+    <Content Include="Web References\ServicePass1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -337,6 +348,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>Lab_2_y_3_Matriculas_Matriculas</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://localhost:44321/passSecurity.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServicePass1\</RelPath>
+      <UpdateFromURL>https://localhost:44321/passSecurity.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Lab_2_y_3_ServicePass1_WebService1</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="https://servicioweb2114.azurewebsites.net/Dedicacion.asmx%3fop=dedAcumulada">
       <UrlBehavior>Dynamic</UrlBehavior>
