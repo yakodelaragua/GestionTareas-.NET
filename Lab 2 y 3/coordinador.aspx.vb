@@ -6,7 +6,6 @@
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
         Dim ws As New Dedicacion.WebService1SoapClient
         Dim res = ws.dedAcumulada(DropDownList1.SelectedValue)
         Label1.Text = res.ToString

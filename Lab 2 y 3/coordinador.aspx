@@ -10,13 +10,27 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="codigo" DataValueField="codigo">
-            </asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS21-14ConnectionString %>" SelectCommand="SELECT [codigo] FROM [Asignaturas]"></asp:SqlDataSource>
+                        <br />
+                        <asp:Label ID="Label2" runat="server" Text="PROYECTO GESTIÓN DE TAREAS COORDINADOR DE TAREAS"></asp:Label>
+                        <br />
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                            <ContentTemplate>
+                                <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="codigo" DataValueField="codigo" Height="16px" Width="181px">
+                                </asp:DropDownList>
+                                <br />
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS21-14ConnectionString %>" SelectCommand="SELECT [codigo] FROM [Asignaturas]"></asp:SqlDataSource>
+                                <br />
+                                <br />
+                                <asp:Button ID="Button1" runat="server" Text="Obtener dedicación media" />
+                                <br />
+                                <br />
+                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                        <br />
+
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Button" />
             <br />
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
         </div>
     </form>
 </body>

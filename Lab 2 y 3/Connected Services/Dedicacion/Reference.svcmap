@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9abaf375-a7d7-42ee-a792-9e9dc66a2280" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ab5820b0-4d59-4e78-99e1-8708f5ce6fc0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="https://localhost:44344/Dedicacion.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Dedicacion.wsdl" MetadataType="Wsdl" ID="df3e7258-c630-4d98-993f-6cf8454be169" SourceId="1" SourceUrl="https://localhost:44344/Dedicacion.asmx?wsdl" />
-    <MetadataFile FileName="Dedicacion.disco" MetadataType="Disco" ID="c44bdda6-f010-4c79-96be-c71b5cfe359a" SourceId="1" SourceUrl="https://localhost:44344/Dedicacion.asmx?disco" />
+    <MetadataFile FileName="Dedicacion.wsdl" MetadataType="Wsdl" ID="fefae13d-b5d0-4076-92c1-74cd61b8d568" SourceId="1" SourceUrl="https://localhost:44344/Dedicacion.asmx?wsdl" />
+    <MetadataFile FileName="Dedicacion.disco" MetadataType="Disco" ID="ad8db9fe-495f-406c-b09d-8760ca2c49fc" SourceId="1" SourceUrl="https://localhost:44344/Dedicacion.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

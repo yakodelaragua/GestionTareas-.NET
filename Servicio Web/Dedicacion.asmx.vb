@@ -14,31 +14,33 @@ Public Class WebService1
     Private Shared comando As New SqlCommand
     <WebMethod()>
     Public Function dedAcumulada(ByVal asignatura As String) As String
+        'abrir conexion
         Try
             conexion.ConnectionString = "Server=tcp:hads21-14.database.windows.net,1433;Initial Catalog=HADS21-14;Persist Security Info=False;User ID=yaracerio99@outlook.es@hads21-14;Password=Antonio14;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
             conexion.Open()
         Catch ex As Exception
-            Return -1
+            Return "ERROR DE CONEXIÓN: " + ex.Message
         End Try
 
         Dim st = "select avg(et.HReales) from EstudiantesTareas as et inner join TareasGenericas as tg on et.CodTarea = tg.Codigo where CodAsig='" + asignatura + "'"
         comando = New SqlCommand(st, conexion)
-            Dim sql As SqlDataReader
         Try
-            sql = comando.ExecuteReader
+            Dim reader = comando.ExecuteReader()
+            If reader.HasRows Then
+                reader.Read()
+                Dim resul = reader.GetInt32(0)
+                conexion.Close()
+                reader.Close()
+                Return resul
+            Else
+                reader.Close()
+                conexion.Close()
+                Return -2
+            End If
         Catch ex As Exception
             conexion.Close()
-            Return -2
+            Return -3
         End Try
-        If sql.HasRows Then
-            sql.Read()
-            conexion.Close()
-            Return sql.GetString(0)
-        Else
-            sql.Close()
-            conexion.Close()
-            Return -2
-            End If
 
         Return False
     End Function
