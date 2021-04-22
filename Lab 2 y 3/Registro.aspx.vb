@@ -23,20 +23,24 @@ Public Class Registro
         Randomize()
         Dim numconfirm = CLng(Rnd() * 9000000) + 1000000
         Dim exists = accesoDatosSQL.estaRegistrado(tEmail.Text)
+        Dim pass1 = tPass1.Attributes("value")
+        Dim pass2 = tPass2.Text
         If (Not exists) Then
-            If (tPass1.Text = tPass2.Text And valido = True) Then
-                Dim pass As String = encriptarPass(tPass1.Text)
-                accesoDatosSQL.enviarEmail(tEmail.Text, numconfirm)
-                accesoDatosSQL.insertar(tEmail.Text, tName.Text, tSurname.Text, numconfirm, False, rbList.SelectedValue, pass, 0)
+            If pass1.Equals(pass2) Then
+                If LMatriculado.Text = "Correo válido" Then
+                    Dim pass As String = encriptarPass(tPass1.Text)
+                    accesoDatosSQL.enviarEmail(tEmail.Text, numconfirm)
+                    accesoDatosSQL.insertar(tEmail.Text, tName.Text, tSurname.Text, numconfirm, False, rbList.SelectedValue, pass, 0)
 
-                Label1.Text = "Compruebe la bandeja de entrada de su correo"
-                Label2.Text = ""
+                    Label1.Text = "Compruebe la bandeja de entrada de su correo"
+                    Label2.Text = ""
 
-            Else
-                Label2.Text = "Las contraseñas no coinciden"
+                Else
+                    Label2.Text = "Las contraseñas no coinciden"
+                End If
             End If
         Else
-            Label1.Text = ""
+                Label1.Text = ""
             Label2.Text = "Ya se ha registrado con este correo, pruebe con otro"
         End If
 
