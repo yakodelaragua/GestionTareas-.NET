@@ -93,7 +93,7 @@ Public Class accesoDatosSQL
             'Añadimos el asunto
             message.Subject = "Confirmación de correo"
             'Concatenamos el cuerpo del mensaje a la plantilla
-            message.Body = "<html><head></head><body>" + "<h1>Pulse CONTINUAR para confirmar el registro</h1>" + "<a href=" + "https://localhost:44348/Confirmar.aspx?email=" + email + "&numconf=" + numConfirm.ToString + ">CONTINUAR</a>" + "<br></br>Si ha recibido este correo por error ignórelo</body></html>"
+            message.Body = "<html><head></head><body>" + "<h1>Pulse CONTINUAR para confirmar el registro</h1>" + "<a href=" + "https://hads2114.azurewebsites.net/Confirmar.aspx?email=" + email + "&numconf=" + numConfirm.ToString + ">CONTINUAR</a>" + "<br></br>Si ha recibido este correo por error ignórelo</body></html>"
             'Definimos el cuerpo como html para poder escojer mejor como lo mandamos
             message.IsBodyHtml = True
             'Se envia el correo

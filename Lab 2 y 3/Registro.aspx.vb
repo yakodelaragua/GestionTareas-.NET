@@ -28,7 +28,7 @@ Public Class Registro
         If (Not exists) Then
             If pass1.Equals(pass2) Then
                 If LMatriculado.Text = "Correo válido" Then
-                    Dim pass As String = encriptarPass(tPass1.Text)
+                    Dim pass As String = encriptarPass(pass1)
                     accesoDatosSQL.enviarEmail(tEmail.Text, numconfirm)
                     accesoDatosSQL.insertar(tEmail.Text, tName.Text, tSurname.Text, numconfirm, False, rbList.SelectedValue, pass, 0)
 
